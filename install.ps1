@@ -1,59 +1,48 @@
+[CmdletBinding()]
 param(
+    # Used only to create .venv; dependencies always go into .venv.
     [string]$PythonPath = '',
-    [string]$PackageIndex = 'https://pypi.org/simple',
-    [switch]$ExistingEnvironment,
-    [switch]$Cuda
+    [string]$PackageIndex = 'https://mirrors.ustc.edu.cn/pypi/simple',
+    [string]$TorchIndex = 'https://mirrors.nju.edu.cn/pytorch/whl/cpu'
 )
 $ErrorActionPreference = 'Stop'
 $repo = $PSScriptRoot
-if (!$PythonPath) {
-    $uv = Get-Command uv -ErrorAction SilentlyContinue
-    if (!$uv) { throw 'Install uv, or specify -PythonPath pointing to Python 3.10.x.' }
-    if ($ExistingEnvironment) { throw '-ExistingEnvironment requires -PythonPath.' }
-    & $uv.Source venv --seed --python 3.10.21 (Join-Path $repo '.venv')
-    if ($LASTEXITCODE) { throw 'Python 3.10 environment creation failed' }
-    $targetPython = Join-Path $repo '.venv\Scripts\python.exe'
-} else {
-    $PythonPath = (Resolve-Path -LiteralPath $PythonPath).Path
-    & $PythonPath -c 'import sys; assert sys.version_info[:2] == (3,10), sys.version'
-    if ($LASTEXITCODE) { throw 'Python 3.10.x is required.' }
-    if ($ExistingEnvironment) { $targetPython = $PythonPath }
-    else {
-        $targetPython = Join-Path $repo '.venv\Scripts\python.exe'
-        if (!(Test-Path -LiteralPath $targetPython)) {
-            & $PythonPath -m venv (Join-Path $repo '.venv')
-            if ($LASTEXITCODE) { throw 'Virtual environment creation failed' }
-        }
+$venv = Join-Path $repo '.venv'
+$targetPython = Join-Path $venv 'Scripts\python.exe'
+
+if (!(Test-Path -LiteralPath $venv)) {
+    if ($PythonPath) {
+        $PythonPath = (Resolve-Path -LiteralPath $PythonPath).Path
+        & $PythonPath -c 'import sys; assert sys.version_info[:2] == (3, 10) and sys.maxsize > 2**32, sys.version'
+        if ($LASTEXITCODE) { throw '64-bit Python 3.10.x is required.' }
+        & $PythonPath -m venv $venv
+    } else {
+        $uv = Get-Command uv -ErrorAction SilentlyContinue
+        if (!$uv) { throw 'Install uv, or specify -PythonPath pointing to 64-bit Python 3.10.x to create .venv.' }
+        $previousPythonMirror = $env:UV_PYTHON_INSTALL_MIRROR
+        try {
+            if (!$env:UV_PYTHON_INSTALL_MIRROR) {
+                $env:UV_PYTHON_INSTALL_MIRROR = 'https://mirrors.nju.edu.cn/github-release/astral-sh/python-build-standalone'
+            }
+            & $uv.Source venv --seed --python 3.10.21 --index-url $PackageIndex $venv
+        } finally { $env:UV_PYTHON_INSTALL_MIRROR = $previousPythonMirror }
     }
+    if ($LASTEXITCODE) { throw 'Cannot create .venv.' }
+} else {
+    Write-Host "Reusing: $venv"
 }
-# Install the course's two small vendored Motrix source packages. No clone or
-# editable path to a neighboring research workspace is needed.
-function Invoke-CoursePython {
-    param([string[]]$PythonArguments)
-    $previousPreference = $ErrorActionPreference
-    try {
-        # Windows PowerShell 5.1 can turn redirected native stderr warnings
-        # into terminating errors. The process exit code is authoritative.
-        $ErrorActionPreference = 'Continue'
-        & $targetPython @PythonArguments 2>&1 | ForEach-Object { Write-Output $_.ToString() }
-        $script:CoursePythonExit = $LASTEXITCODE
-    } finally { $ErrorActionPreference = $previousPreference }
+if (!(Test-Path -LiteralPath $targetPython -PathType Leaf)) {
+    throw 'Incomplete .venv. Rename it to keep a backup, then rerun install.ps1.'
 }
-$dependencyList = Join-Path $repo 'requirements.lock.txt'
-if (!(Test-Path -LiteralPath $dependencyList)) { $dependencyList = Join-Path $repo 'requirements.txt' }
-Invoke-CoursePython -PythonArguments @('-m', 'pip', 'install', '-r', $dependencyList, '--index-url', $PackageIndex)
-if ($script:CoursePythonExit) { throw 'Course dependencies installation failed' }
-Invoke-CoursePython -PythonArguments @('-c', "import importlib.util,sys; spec=importlib.util.find_spec('torch'); sys.exit(2) if spec is None else None; import torch; sys.exit(0 if torch.__version__.split('+')[0] == '2.7.0' else 2)")
-if ($script:CoursePythonExit) {
-    $torchIndex = if ($Cuda) { 'https://download.pytorch.org/whl/cu128' } else { 'https://download.pytorch.org/whl/cpu' }
-    Invoke-CoursePython -PythonArguments @('-m', 'pip', 'install', 'torch==2.7.0', '--index-url', $torchIndex)
-    if ($script:CoursePythonExit) { throw 'PyTorch installation failed' }
-}
-Invoke-CoursePython -PythonArguments @('-m', 'pip', 'install', '--no-deps', (Join-Path $repo 'vendor\motrix_env_core'), (Join-Path $repo 'vendor\motrix_env_motrixsim'), '--index-url', $PackageIndex)
-if ($script:CoursePythonExit) { throw 'Vendored Motrix source installation failed' }
-Invoke-CoursePython -PythonArguments @('-m', 'pip', 'check')
-if ($script:CoursePythonExit) { throw 'Dependency consistency check failed' }
-Invoke-CoursePython -PythonArguments @('-X', 'utf8', (Join-Path $repo 'course\cli.py'), 'doctor')
-if ($script:CoursePythonExit) { throw 'Environment doctor failed' }
-Write-Host "Ready: $targetPython"
-if ($ExistingEnvironment) { Write-Host "Use: .\run.ps1 -PythonPath '$targetPython' doctor" }
+
+# Windows PowerShell 5.1 can treat redirected native stderr as errors.
+# Preserve the actual Python process exit code, including pip/doctor failures.
+$previousPreference = $ErrorActionPreference
+try {
+    $ErrorActionPreference = 'Continue'
+    & $targetPython -X utf8 (Join-Path $repo 'scripts\environment.py') install --package-index $PackageIndex --torch-index $TorchIndex 2>&1 |
+        ForEach-Object { Write-Output $_.ToString() }
+    $result = $LASTEXITCODE
+} finally { $ErrorActionPreference = $previousPreference }
+if ($result) { throw 'Environment installation failed. For a broken .venv, rename it and rerun install.ps1.' }
+Write-Host 'Ready. Run: .\run.ps1 doctor'

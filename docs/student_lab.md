@@ -6,7 +6,7 @@
 
 本仓库提供机器人模型、Motrix 训练环境、PPO 课堂训练器、可训练起点、评估工具、MuJoCo 可视化和固定接口 ONNX 导出。课程没有要求从零训练，也不包含跌倒起身任务。
 
-开始前按 [README](../README.md) 完成安装与功能验证。**下文所有命令在学生仓库根目录执行**，默认使用本仓库 `.venv`。直接使用已有 Conda 环境时，每条 `.\run.ps1` 命令都要添加 `-PythonPath 'C:\path\to\conda\envs\course\python.exe'`。文件用途和模型接口见 [仓库与模型说明](repository_guide.md)。
+开始前按 [README](../README.md) 完成安装与功能验证。**下文所有命令在学生仓库根目录执行**，统一使用本仓库 `.venv`，无需激活环境。Linux 用户将 `.\run.ps1` 替换为 `bash run.sh`。文件用途和模型接口见 [仓库与模型说明](repository_guide.md)。
 
 ## 1. 观察教学起点
 

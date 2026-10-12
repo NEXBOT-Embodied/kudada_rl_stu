@@ -5,7 +5,7 @@
 ## 课前自查
 
 - [ ] 每组至少一台电脑准备好课程环境，已完整克隆或解压学生仓库，能够找到 `run.ps1` 和 `models/teaching_start.pt`。
-- [ ] 已选择安装方式，知道后续使用本仓库 `.venv` 还是显式指定 Conda 的 `-PythonPath`。
+- [ ] 已通过安装脚本建立本仓库 `.venv`，后续统一使用 `run.ps1`（Linux 为 `bash run.sh`），无需激活环境。
 - [ ] `doctor` 的 `missing` 列表为空，`default_checkpoint_present` 为 `true`。
 - [ ] PD 与 RL 两种 GUI 检查都能显示完整机器人并运行。
 - [ ] Motrix 短评估正常结束，已生成 `reports/local/preclass/evaluation.json`。

@@ -6,6 +6,7 @@
     ".git",
     ".pytest_cache",
     ".venv",
+    ".venv-backup*",
     "__pycache__",
     "reports",
     "runs"
@@ -18,8 +19,23 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 63,
-      "sha256": "c1547c63c5e28d6e944f212da9ea1f7ef3ef3975d786200461a81166a28ec3ef"
+      "bytes": 78,
+      "sha256": "103e2042f1d7af77a9bbc99279db4a98f4c4655d6e66d6f7c35549d6349dde59"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1761,
+      "sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 1709,
+      "sha256": "8f72b261e7285f579f5dab2eb013e8609c6055be6d6966c726b10c347fc5b3e5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7348,
+      "sha256": "84d0234e476070fca2984901c55de90d733cec0bd4baef02bc0f3d8e88598ce6"
     },
     {
       "path": "assets/kudada/check_kudada_urdf.py",
@@ -143,38 +159,33 @@
     },
     {
       "path": "docs/preclass_preparation.md",
-      "bytes": 1753,
-      "sha256": "cfd51896f59ed065b310d99f37629dfb6c3aecb30a1c252d4874e9285a77fa10"
+      "bytes": 1776,
+      "sha256": "47c0a9c245b2cd1833435968f10bd4c9c5c3b3ea7bc43c442ea8d9255578d172"
     },
     {
       "path": "docs/repository_guide.md",
-      "bytes": 3043,
-      "sha256": "152a35887401b9136591f3172dd550b846115a44939457fb027be4e52d7ffdab"
+      "bytes": 3430,
+      "sha256": "dedd0c962927a46deb99ab3cc85b874b0d75a42eb3786ebd1a2fb333f592c1a1"
     },
     {
       "path": "docs/student_lab.md",
-      "bytes": 8419,
-      "sha256": "46b1d9f494b1007a709fd52847097190510f3000059ba85cdd0fab6b38f2d9da"
+      "bytes": 8361,
+      "sha256": "1ace8832fe142c1a816daa65a16eee0de8ce8c2dc729abd2a3ae1720a9ae2d41"
     },
     {
       "path": "docs/troubleshooting.md",
-      "bytes": 2233,
-      "sha256": "ca7c0bcd0cfae44dc76d7c988a7596002088ddc4c730f549cf35ea76fd47a3df"
-    },
-    {
-      "path": "install-conda.ps1",
-      "bytes": 1279,
-      "sha256": "fcebd21fa8d01cf5dd5bfde27a9c140e6187dfacee9dce5ab36db79098841f29"
+      "bytes": 3030,
+      "sha256": "65b477ea17f4456b9b5ca8950175bac95e26439a13a4adee92cff9825acde1d8"
     },
     {
       "path": "install.ps1",
-      "bytes": 3552,
-      "sha256": "42511f3936e7c98d3b31cc0956493b10f8f08fd9cd1708210cbbd1f1a19f8bc3"
+      "bytes": 2304,
+      "sha256": "aa4559ec1704d22d78d3b7c2cc5dd0c428e7f036b5218592a2676d0bfccdfa58"
     },
     {
       "path": "install.sh",
-      "bytes": 670,
-      "sha256": "0d1fc4a99e437f7ef6112148dc3b7057cb6d7da662e6d45380777f19a92de3cb"
+      "bytes": 1315,
+      "sha256": "6bfb9fed07dce21b1a67ee874103fd3571d228f4421f948d5ad93a4f8d9db2cd"
     },
     {
       "path": "kudada_motrix/__init__.py",
@@ -227,9 +238,9 @@
       "sha256": "fb76fd3dec7e8367a6c6047e124d2375176f111c3aca49d8aab44d8d87d1c5b6"
     },
     {
-      "path": "LICENSE",
-      "bytes": 1761,
-      "sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e"
+      "path": "licenses/MotrixLab.txt",
+      "bytes": 11058,
+      "sha256": "e1c3344fd3bb9105da14e1554f8794b13974c9d06cd05fdb34871e19bb4f21e3"
     },
     {
       "path": "licenses/kudada.txt",
@@ -240,11 +251,6 @@
       "path": "licenses/legged_gym.txt",
       "bytes": 1761,
       "sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e"
-    },
-    {
-      "path": "licenses/MotrixLab.txt",
-      "bytes": 11058,
-      "sha256": "e1c3344fd3bb9105da14e1554f8794b13974c9d06cd05fdb34871e19bb4f21e3"
     },
     {
       "path": "licenses/rsl_rl.txt",
@@ -272,16 +278,6 @@
       "sha256": "c30a181bba0c1bf22e3f8ef5cf13789f4ba7a74ff129a2a0338f5412029b03d3"
     },
     {
-      "path": "NOTICE.md",
-      "bytes": 1709,
-      "sha256": "8f72b261e7285f579f5dab2eb013e8609c6055be6d6966c726b10c347fc5b3e5"
-    },
-    {
-      "path": "README.md",
-      "bytes": 6871,
-      "sha256": "da7cafc114878ce27435f0f1047e43b4dfe2e7f595b0fc701c7f6f94c32382dc"
-    },
-    {
       "path": "references/tinker/binary_audit.md",
       "bytes": 8926,
       "sha256": "8cffac3b4c2e602992fdb182e7236b59c7a8e191e41c73c5f22e5458e478c2fc"
@@ -298,18 +294,23 @@
     },
     {
       "path": "requirements.lock.txt",
-      "bytes": 987,
-      "sha256": "adf0b3677fc6ede6a05da1c4a0688f03a65e066093cb7705fc19a76fec7d7ff8"
+      "bytes": 993,
+      "sha256": "0b3a3ecb54e894945da5d11366744fc654a083415e9efa5c7de311c014d11bd9"
     },
     {
       "path": "requirements.txt",
-      "bytes": 385,
-      "sha256": "b219e894631efc63586cde8c384bd6dda341f65e4a68162219a6d95427ac0f03"
+      "bytes": 162,
+      "sha256": "eda95f83755787fb3cfda985b440394bab7aef0e4c083cb9cb0702cec1b0ebe3"
     },
     {
       "path": "run.ps1",
-      "bytes": 846,
-      "sha256": "901c974f649bb0f36d6067b977be310c9fb8b944226ebea2179696611050e26b"
+      "bytes": 965,
+      "sha256": "96343b4625aa0730c361d7521f9c828d2b39c0c2cdfc628c8085c9a6c8e5a0d6"
+    },
+    {
+      "path": "run.sh",
+      "bytes": 411,
+      "sha256": "b861097a0c454cd35a97ccef84323b41e028b57294579fbbe4a65719ab4bfc37"
     },
     {
       "path": "scratch_policy/__init__.py",
@@ -382,6 +383,11 @@
       "sha256": "0ce2e0c80273abb59a64cb3857cba0a6c96dc51b5d4702eb484339d6ac3e9d29"
     },
     {
+      "path": "scripts/environment.py",
+      "bytes": 2782,
+      "sha256": "923babde2a37ad170d0b6f1a00b0b7eee997dbc17d84b3e124e2aa1dab45910b"
+    },
+    {
       "path": "tinker_policy/__init__.py",
       "bytes": 75,
       "sha256": "73f7983024e927c52de789edfc1034787da67c763221a11d27682822e2b03bf0"
@@ -397,14 +403,14 @@
       "sha256": "62c5083ccb41d80ee30711a93bbccc90ac5a5e68c26968358545df39d6c395d5"
     },
     {
-      "path": "vendor/motrix_env_core/pyproject.toml",
-      "bytes": 1898,
-      "sha256": "08c484c137ef3a0e92b2a0d8c92673fc60206396bb3e5e46d01cfee25cf5097c"
-    },
-    {
       "path": "vendor/motrix_env_core/README.md",
       "bytes": 1982,
       "sha256": "9b518c824101fd03fb75906ddf7f66afcdd8e03717260943b6972c504641889a"
+    },
+    {
+      "path": "vendor/motrix_env_core/pyproject.toml",
+      "bytes": 1898,
+      "sha256": "08c484c137ef3a0e92b2a0d8c92673fc60206396bb3e5e46d01cfee25cf5097c"
     },
     {
       "path": "vendor/motrix_env_core/src/motrix_env_core/__init__.py",
@@ -827,14 +833,14 @@
       "sha256": "f08e5033b0e91613715907aa2e39f956f3de0d7b903339133d866c0928c6507a"
     },
     {
-      "path": "vendor/motrix_env_motrixsim/pyproject.toml",
-      "bytes": 583,
-      "sha256": "3b3405e7f0cccc3ce2c06104ee306a2d2f96ea373cd981d237e1fa4beedf5c7e"
-    },
-    {
       "path": "vendor/motrix_env_motrixsim/README.md",
       "bytes": 825,
       "sha256": "a26be065ef636fd49cba480130cb83855e8b48aa9f5374f7dc975d584c5fb0a5"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/pyproject.toml",
+      "bytes": 583,
+      "sha256": "3b3405e7f0cccc3ce2c06104ee306a2d2f96ea373cd981d237e1fa4beedf5c7e"
     },
     {
       "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/__init__.py",
@@ -882,8 +888,8 @@
       "sha256": "7f83794c5cf2e9e7fb52b87f2c62cf534a6cbb5feb883abb9018252fdac3938e"
     }
   ],
-  "delivery_file_count": 173,
-  "delivery_total_bytes": 8755893,
+  "delivery_file_count": 175,
+  "delivery_total_bytes": 8761809,
   "origin_records": [
     {
       "relative": "scratch_policy/__init__.py",

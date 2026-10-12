@@ -1,15 +1,3 @@
-# MotrixLab source commit 069b1bc4aa4f758786469009e38016518c21af70 is vendored.
-# PyTorch 2.7.0 CPU (or optional cu128) is installed separately by install.ps1.
-motrixsim==0.10.1
-gymnasium==1.1.1
-array-api-compat==1.15.0
-omegaconf==2.3.1
-numpy==2.2.6
-onnx==1.20.1
-onnxruntime==1.21.0
-mujoco==3.9.0
-matplotlib==3.10.6
-PyYAML==6.0.3
-imageio==2.37.0
-imageio-ffmpeg==0.6.0
-markdown==3.10.3
+# One dependency list for both platforms. PyTorch CPU and vendored Motrix
+# packages are installed separately by scripts/environment.py.
+-r requirements.lock.txt

@@ -8,6 +8,10 @@
 
 | 路径 | 用途 |
 |---|---|
+| `install.ps1` / `install.sh` | Windows / Linux 安装入口，创建或复用本仓库 `.venv` |
+| `run.ps1` / `run.sh` | 固定使用本仓库 `.venv` 启动课程命令 |
+| `scripts/environment.py` | 两个平台共用的环境校验、依赖安装与 doctor 流程 |
+| `requirements.lock.txt` / `requirements.txt` | 固定版本依赖及其兼容入口，共用一份依赖清单 |
 | `models/teaching_start.pt` / `.onnx` | 可训练检查点与对应 ONNX，模型身份见下文及教师发布说明 |
 | `models/manifest.json` | 教学起点的来源、模型哈希和限制 |
 | `configs/` | B/C 同等预算、单变量实验配置 |

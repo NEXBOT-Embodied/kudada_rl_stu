@@ -45,53 +45,69 @@ cd kudada_rl_stu_repo
 
 ## 环境安装
 
-需要 Python **3.10.x**。PyTorch、Motrix、MuJoCo、ONNX Runtime 等由安装脚本统一安装，无需自行挑选版本。以下三种方式选一种即可。
+所有安装和运行统一使用**学生仓库根目录内的 `.venv`**，Python 为 **64 位 3.10.x**，推荐 3.10.21。安装脚本统一安装固定版本依赖、PyTorch 2.7.0 CPU 和本仓库的 Motrix 源码包，并执行依赖检查与 `doctor`。
 
-### 方式一：使用 uv
+默认使用国内镜像，直接运行安装脚本即可：
 
-先按 [uv 官方安装说明](https://docs.astral.sh/uv/getting-started/installation/) 安装 uv，重新打开 PowerShell，确认 `uv --version` 能运行，然后执行：
+| 下载内容 | 默认镜像 |
+|---|---|
+| Python 依赖、pip 引导包及 Motrix 构建依赖 | USTC：`https://mirrors.ustc.edu.cn/pypi/simple` |
+| PyTorch CPU | 南京大学：`https://mirrors.nju.edu.cn/pytorch/whl/cpu` |
+| uv 自动下载的 Python 3.10.21 | 南京大学：`https://mirrors.nju.edu.cn/github-release/astral-sh/python-build-standalone` |
+
+安装脚本也会把 `.venv` 内 pip 的默认源设为 USTC；使用自定义 `PackageIndex` 时改为对应源。
+
+### Windows
+
+已有 Python 时，可通过 USTC 安装 uv：
+
+```powershell
+py -m pip install uv --index-url https://mirrors.ustc.edu.cn/pypi/simple
+```
+
+也可按 [uv 安装说明](https://docs.astral.sh/uv/getting-started/installation/) 安装。重新打开 PowerShell，确认 `uv --version` 能运行，然后执行：
 
 ```powershell
 .\install.ps1
 ```
 
-脚本会创建本仓库的 `.venv`，使用 Python 3.10.21 并安装课程依赖。
+首次执行使用 uv 创建 Python 3.10.21 的 `.venv`；再次执行会复用已有 `.venv` 并检查、安装依赖，无需手动激活。
 
-### 方式二：使用已有 Python 3.10 创建本仓库环境
-
-已有 Python 3.10 或 Conda Python 3.10 时，可用它创建本仓库的 `.venv`。将示例路径替换为自己的 `python.exe` 绝对路径：
+如果已经有 64 位 Python 3.10，可在首次安装时指定基础解释器，仍由同一个脚本创建仓库内 `.venv`。将示例路径替换为自己的 `python.exe` 绝对路径：
 
 ```powershell
 .\install.ps1 -PythonPath 'C:\path\to\python.exe'
 ```
 
-方式一、二安装后，都可以直接运行 `.\run.ps1 ...`，无需手动激活 `.venv`。
+`-PythonPath` 仅用于创建 `.venv`。已有 Conda 的 Python 3.10 也可以作为基础解释器，课程依赖始终安装到 `.venv`，运行时统一使用 `.\run.ps1 ...`。
 
-### 方式三：直接使用已有 Conda 环境
+### Linux
 
-确认该环境使用 Python 3.10.x，再将示例路径替换为该环境解释器的绝对路径：
-
-```powershell
-.\install-conda.ps1 -PythonPath 'C:\path\to\conda\envs\course\python.exe'
-.\run.ps1 -PythonPath 'C:\path\to\conda\envs\course\python.exe' doctor
-```
-
-此方式直接向所选环境安装依赖。后续每条 `.\run.ps1` 命令都要添加 `-PythonPath`；仅激活 Conda 不会改变脚本默认使用的 `.venv` 路径。
-
-### Linux 用户
-
-Linux 安装入口如下，当前发布包的 Linux 安装尚未实测，请提前完成下文同等功能验证：
+安装 uv 后执行同等入口。
 
 ```bash
-bash install.sh /path/to/python3.10
-.venv/bin/python -m course.cli doctor
+bash install.sh
+bash run.sh doctor
 ```
 
-后续将 `.\run.ps1` 替换为 `.venv/bin/python -m course.cli`。安装报错时参考 [故障排查](docs/troubleshooting.md)。
+已有 64 位 Python 3.10 时，可用 `bash install.sh /path/to/python3.10` 创建 `.venv`。后续将文档中的 `.\run.ps1` 替换为 `bash run.sh`；启动脚本均自动进入仓库目录。
+
+### 更新与重建环境
+
+更新仓库后重新运行安装脚本即可。
+
+下载依赖失败时可以分别切换 Python 依赖源与 PyTorch 镜像，例如：
+
+```powershell
+.\install.ps1 -PackageIndex https://pypi.tuna.tsinghua.edu.cn/simple `
+  -TorchIndex https://mirror.sjtu.edu.cn/pytorch-wheels/cpu
+```
+
+Linux 对应 `bash install.sh '' https://pypi.tuna.tsinghua.edu.cn/simple https://mirror.sjtu.edu.cn/pytorch-wheels/cpu`；第一个参数是创建 `.venv` 时使用的基础 Python 路径。uv 的 Python 下载镜像可通过 `UV_PYTHON_INSTALL_MIRROR` 环境变量覆盖。更多问题见 [故障排查](docs/troubleshooting.md)。
 
 ## 安装验证
 
-使用本仓库 `.venv` 时，依次执行以下四项检查。每次 GUI 观察结束后关闭窗口，再执行下一条命令。
+依次执行以下四项检查。每次 GUI 观察结束后关闭窗口，再执行下一条命令。
 
 ```powershell
 # 1. 检查解释器、依赖和教学模型
@@ -109,21 +125,9 @@ bash install.sh /path/to/python3.10
   --output reports/local/preclass
 ```
 
-若选择直接使用已有 Conda 环境，对应命令为：
-
-```powershell
-$coursePython = 'C:\path\to\conda\envs\course\python.exe'
-.\run.ps1 -PythonPath $coursePython doctor
-.\run.ps1 -PythonPath $coursePython play pd --seconds 10
-.\run.ps1 -PythonPath $coursePython play stand --checkpoint models/teaching_start.pt --seconds 10
-.\run.ps1 -PythonPath $coursePython evaluate --checkpoint models/teaching_start.pt `
-  --modes stand --seconds 2 --conditions 5 `
-  --output reports/local/preclass
-```
-
 | 检查 | 通过标准 |
 |---|---|
-| 环境检查 | `doctor` 的 `missing` 列表为空，`default_checkpoint_present` 为 `true`；`cuda_available=false` 不影响本课 |
+| 环境检查 | `python` 指向本仓库 `.venv`，`missing` 列表为空，`default_checkpoint_present` 为 `true`；CPU 版的 `cuda_available=false` 为预期结果 |
 | PD 回放 | GUI 显示完整机器人，仿真可以运行并正常关闭 |
 | 策略回放 | `models/teaching_start.pt` 能加载、仿真能运行；教学起点的前后摆动属于预期现象 |
 | 短评估 | 正常结束，生成 `reports/local/preclass/evaluation.json`，包含 5 组条件 |
