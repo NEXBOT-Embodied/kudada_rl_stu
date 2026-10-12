@@ -34,8 +34,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7348,
-      "sha256": "84d0234e476070fca2984901c55de90d733cec0bd4baef02bc0f3d8e88598ce6"
+      "bytes": 7513,
+      "sha256": "0e9fba23f2d815a223fb1d7d71d8fb34e461a81e76f8edf1800b18c747161b8a"
     },
     {
       "path": "assets/kudada/check_kudada_urdf.py",
@@ -159,8 +159,8 @@
     },
     {
       "path": "docs/preclass_preparation.md",
-      "bytes": 1776,
-      "sha256": "47c0a9c245b2cd1833435968f10bd4c9c5c3b3ea7bc43c442ea8d9255578d172"
+      "bytes": 5646,
+      "sha256": "651e65a945024d968da075324b682cbf095a0be2ff6c9b5a38a916869f7f6ffc"
     },
     {
       "path": "docs/repository_guide.md",
@@ -889,7 +889,7 @@
     }
   ],
   "delivery_file_count": 175,
-  "delivery_total_bytes": 8761809,
+  "delivery_total_bytes": 8765844,
   "origin_records": [
     {
       "relative": "scratch_policy/__init__.py",
