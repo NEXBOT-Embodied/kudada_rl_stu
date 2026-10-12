@@ -143,13 +143,18 @@
     },
     {
       "path": "docs/preclass_preparation.md",
-      "bytes": 5399,
-      "sha256": "cf41d4b94a62a0af4611e6826c90524c3fd49646bcb098da97fae4bd61dec5db"
+      "bytes": 1753,
+      "sha256": "cfd51896f59ed065b310d99f37629dfb6c3aecb30a1c252d4874e9285a77fa10"
+    },
+    {
+      "path": "docs/repository_guide.md",
+      "bytes": 3043,
+      "sha256": "152a35887401b9136591f3172dd550b846115a44939457fb027be4e52d7ffdab"
     },
     {
       "path": "docs/student_lab.md",
-      "bytes": 5255,
-      "sha256": "4ee42f1bdf73040189826433f1edc7681df70e320439411c8ac4664cd297ac18"
+      "bytes": 8419,
+      "sha256": "46b1d9f494b1007a709fd52847097190510f3000059ba85cdd0fab6b38f2d9da"
     },
     {
       "path": "docs/troubleshooting.md",
@@ -273,8 +278,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6370,
-      "sha256": "0dd529d1648c645dcbcc5221d8cb4aa2d7e3db260ae5fb5c1eb551e944eb2904"
+      "bytes": 6871,
+      "sha256": "da7cafc114878ce27435f0f1047e43b4dfe2e7f595b0fc701c7f6f94c32382dc"
     },
     {
       "path": "references/tinker/binary_audit.md",
