@@ -1,0 +1,73 @@
+{
+  "checkpoint": "models/teaching_start.pt",
+  "seed": 4201,
+  "iterations": 20,
+  "num_envs": 64,
+  "rollout_steps": 256,
+  "epochs": 3,
+  "minibatches": 8,
+  "lr": 3e-05,
+  "critic_lr": 0.0003,
+  "std": 0.03,
+  "gamma": 0.995,
+  "gae_lambda": 0.995,
+  "clip_ratio": 0.1,
+  "target_kl": 0.02,
+  "standing_speed_cost": 0.0,
+  "environment": {
+    "ctrl_dt": 0.02,
+    "initial_height": 0.28,
+    "kp_scale": 1,
+    "heading_command": false,
+    "fixed_command": null,
+    "enforce_action_bounds": true,
+    "enforce_attitude_protection": true,
+    "curriculum_speed_start": 0.2,
+    "curriculum_randomization": false,
+    "speed_tracking_sigma": 0.08,
+    "gait_reward_scale": 3,
+    "pose_reward_scale": 4,
+    "clearance_reward_scale": 1.2,
+    "speed_reward_scale": 4,
+    "progress_reward_scale": 3,
+    "progress_window_seconds": 0.5,
+    "wrong_phase_liftoff_scale": 1,
+    "lateral_cost": 24,
+    "heading_cost": 24,
+    "reward_multipliers": {
+      "yaw_rate": 0,
+      "standing_pose": 3,
+      "stand_support": 2
+    },
+    "randomization": {
+      "randomize_friction": true,
+      "friction_range": [
+        0.75,
+        1.05
+      ],
+      "randomize_init_joint_offset": true,
+      "init_joint_offset_range": [
+        -0.01,
+        0.01
+      ],
+      "randomize_initial_velocity": true,
+      "initial_velocity_range": [
+        -0.01,
+        0.01
+      ]
+    },
+    "cycle_yaw_window_seconds": 0.5,
+    "cycle_yaw_rate_cost": 480,
+    "randomized_turning_fraction_of_moving": 0.0,
+    "yaw_command_min_rad_s": 0.08,
+    "yaw_command_max_rad_s": 0.16,
+    "yaw_curriculum_updates": 10,
+    "add_noise": true,
+    "noise_level": 0.1,
+    "max_episode_seconds": 10.0,
+    "training_speed": 0.2,
+    "standing_fraction": 0.5,
+    "command_resampling_seconds": 10.0
+  },
+  "run_dir": "runs/B"
+}

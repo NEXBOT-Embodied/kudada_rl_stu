@@ -1,0 +1,109 @@
+{
+  "audit_method": "Manual static data-flow analysis of named AArch64 ELF functions; no hardware execution",
+  "source_sha256": {
+    "motion_ctrl/control_task": "01379eb81e77337e95852ae6d8d4532b5f3ac01a82300049e3d252cae02178bb",
+    "motion_ctrl/lib_files/liblite_arm64.so": "05cb7a82b8d7d33a3174747389adce0b924ccfb0998baf20aca7ce365a04b95f",
+    "motion_ctrl/Model/tinker_lingzu.onnx": "b43049123948889d36dc348c28fc741c54cf8352d859d4a7cc1092adbbe28e14",
+    "motion_ctrl/Param/param_gait.yaml": "9832f52d57dc3783a657a7613c2f5013b082e31d94b4e60b543cebea006af863",
+    "motion_ctrl/Param/param_robot.yaml": "566043a994084ea69ec365d46ebac60f6489b4846eeb4e99e853697f10e6ff0f",
+    "motion_ctrl/Param/param_motors.yaml": "660b5d47de2c49173c5379585adcc35e17c1365f72cc67a3dcc6a7982a4e4aab",
+    "motion_ctrl/Param/param_imu.yaml": "4305ac458bf9127d704d9467b1abffa339103ec420d70f1d323b41848f932b9b",
+    "kudada_rl_motrix/tools/audit_tinker_binary.py": "2952f9a9ab652218a79156065b3242ba95091648ec1945aec3962aed3fa2d888",
+    "reports/tinker_retrain/contract_audit/findings.md": "4422452a48bfc640f0ac5ea4f00e46f2b9e03a7e3b2dd262b5da79fb5a966d66"
+  },
+  "observation": {
+    "dtype": "float32",
+    "shape": [
+      1,
+      924
+    ],
+    "frame_size": 44,
+    "frame_count": 21,
+    "history": "oldest_first",
+    "initial_history": "zeros",
+    "reserved": [
+      0,
+      0,
+      0
+    ],
+    "command_linear_scale": 2.0,
+    "command_angular_scale": 0.25,
+    "command_smoothing": 0.03,
+    "command_deadband": 0.01,
+    "previous_actions": "clipped_raw_outputs",
+    "position_scale": 1.0,
+    "joint_velocity_scale": 0.05,
+    "sensor_degrees_per_radian": 57.3
+  },
+  "output": {
+    "dtype": "float32",
+    "shape": [
+      1,
+      11
+    ],
+    "actuated_slice": [
+      0,
+      10
+    ],
+    "output_10_ignored": true,
+    "clamp": [
+      -20.0,
+      20.0
+    ],
+    "action_scale": 0.25,
+    "action_gains": [
+      1.75,
+      1.0625,
+      1.0625,
+      1.0625,
+      1.4,
+      1.75,
+      1.0625,
+      1.0625,
+      1.0625,
+      1.4
+    ],
+    "default_angles": [
+      0,
+      -0.05,
+      -0.23,
+      0.3,
+      -0.14,
+      0,
+      0.05,
+      -0.23,
+      0.3,
+      -0.14
+    ],
+    "action_filter": "alpha=min(50*max(dt,0),.25)",
+    "active_rl_stiffness": 1.0
+  },
+  "clock": {
+    "nominal_control_dt": 0.001,
+    "nominal_inference_dt": 0.02,
+    "inference_gate": "accumulated_dt > nominal_inference_dt",
+    "phase_period": 0.5,
+    "freeze": "all(abs(filtered_command)<.1) and wrapped_phase<.1"
+  },
+  "protection": {
+    "feedback_velocity_deg_s": 1000.0,
+    "command_velocity_deg_s": 1000.0,
+    "velocity_duration": 0.03,
+    "command_velocity_filter_time_constant": 0.1,
+    "checked_dt_range": [
+      0.0,
+      0.0055
+    ],
+    "exceeded_velocity_transition": "SAFE_HOLD, motors retained",
+    "fall_pitch_deviation_deg": 35.0,
+    "fall_roll_deviation_deg": 25.0,
+    "fall_duration": 0.02,
+    "velocity_timer": "One shared timer increments while any joint exceeds feedback or filtered command limit; no exceedance resets it"
+  },
+  "limitations": [
+    "Physical IMU and encoder calibration not established",
+    "Hardware driver transfer function not audited",
+    "Reactivation may retain history/phase",
+    "Actual control/inference timing has measured jitter"
+  ]
+}

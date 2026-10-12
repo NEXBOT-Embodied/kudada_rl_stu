@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "path": "C:\\NEXBOT\\Project\\2026Roscon\\kudada_rl_stu_repo\\models\\teaching_start.pt",
+  "sha256": "e2396d9719f88922804f04f8d533107b0192f5ca84512e93e6994cdbcbc9d272",
+  "kind": "checkpoint",
+  "actor_sha256": "0f8b3625c8a1787b04d65e26bdd4e944ed1f803e278e3473714fb8d52122cceb",
+  "architecture": "scratch_base_mlp",
+  "completed_updates": 550,
+  "onnx": "C:\\NEXBOT\\Project\\2026Roscon\\kudada_rl_stu_repo\\models\\teaching_start.onnx",
+  "onnx_sha256": "7c59335dc6d579db6f75b499ca078019f5eca8f965b3d1cf7997f6011c1b9bc0",
+  "input_shape": [
+    1,
+    924
+  ],
+  "output_shape": [
+    1,
+    11
+  ],
+  "dtype": "float32",
+  "history_frames": 21,
+  "frame_width": 44,
+  "history_order": "oldest_first_newest_last",
+  "startup_history": "zero_fill_then_append_one_frame",
+  "reserved_output_zero": true,
+  "parity_cases": 284,
+  "max_abs_error": 7.152557373046875e-07,
+  "onnxruntime_version": "1.21.0",
+  "opset": 17,
+  "ir_version": 8,
+  "hardware_tested": false,
+  "scope": "Interface and numerical parity. Physical performance requires separate evaluation."
+}

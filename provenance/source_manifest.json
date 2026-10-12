@@ -1,0 +1,1996 @@
+{
+  "schema": "course_student_delivery_source_manifest_v2",
+  "note": "Actual student deliverables including models. This manifest excludes itself, installed environments, generated runs/reports and caches. Origin records preserve import evidence; all paths are provenance only.",
+  "excluded": [
+    ".deps",
+    ".git",
+    ".pytest_cache",
+    ".venv",
+    "__pycache__",
+    "reports",
+    "runs"
+  ],
+  "delivery_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 122,
+      "sha256": "9304a4472ea2d9127ab923a1e1d31389c859d137886271b7c99072027b117625"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 63,
+      "sha256": "c1547c63c5e28d6e944f212da9ea1f7ef3ef3975d786200461a81166a28ec3ef"
+    },
+    {
+      "path": "assets/kudada/check_kudada_urdf.py",
+      "bytes": 10907,
+      "sha256": "2cc41d8ecddcbc53ee943c894d7500e956c04fd012035d38d1434112032412e2"
+    },
+    {
+      "path": "assets/kudada/kudada_lingzu.urdf",
+      "bytes": 16642,
+      "sha256": "7130fb3f3d26af03aaab435ea3a7a0a6a723668fa0340baff88e0048b797ac59"
+    },
+    {
+      "path": "assets/kudada/kudada_lingzu.xml",
+      "bytes": 11311,
+      "sha256": "2bb5a87a3d46472aca5bd4275804945363c5ad41db08965cc6939179d288adcf"
+    },
+    {
+      "path": "assets/kudada/meshes/base_link.STL",
+      "bytes": 250084,
+      "sha256": "03c1b93d8c6a58e341533af0d37d48cfccda9006c8676881523b2797b98ab28c"
+    },
+    {
+      "path": "assets/kudada/meshes/left_hip_pitch_Link.STL",
+      "bytes": 250084,
+      "sha256": "ac1969648a53913fc1dfd58490d8b49a232039617baaf63dfc52d84e5c53f7d5"
+    },
+    {
+      "path": "assets/kudada/meshes/left_knee_Link.STL",
+      "bytes": 873084,
+      "sha256": "e8be95aa1f80c2aa1e76875c43e44dd9ce4b92a08ee72d2a9593d04cfecdc865"
+    },
+    {
+      "path": "assets/kudada/meshes/left_leg_pitch_Link.STL",
+      "bytes": 335284,
+      "sha256": "8e6cc346624230c4820cb23685f08fe9661e9ff5c93abe713fe9502b57301b60"
+    },
+    {
+      "path": "assets/kudada/meshes/left_roll_Link.STL",
+      "bytes": 251284,
+      "sha256": "73692c26da4d5457d2628d1e2aac0ff5fb25bb6291d20d5b24b75ddcf0b59678"
+    },
+    {
+      "path": "assets/kudada/meshes/left_yaw_Link.STL",
+      "bytes": 682184,
+      "sha256": "e897135d30703912323eebf960cbdb1426ffbee0fd5e9c5c153274a6f36113c2"
+    },
+    {
+      "path": "assets/kudada/meshes/right_hip_pitch_Link.STL",
+      "bytes": 250084,
+      "sha256": "8ea06eaea96e4dc15002482a587d5ae2d90d345c28b2ddc80cbe53688e231bda"
+    },
+    {
+      "path": "assets/kudada/meshes/right_knee_Link.STL",
+      "bytes": 871484,
+      "sha256": "539825e3daff2603222ccb85e11d58a73c9d765656fd8bc0d8ba0f395c9f7d56"
+    },
+    {
+      "path": "assets/kudada/meshes/right_leg_pitch_Link.STL",
+      "bytes": 336184,
+      "sha256": "347a4a099f3010d37c52aa9747888f7ec3c3d2150b815dfee8a934698be85e56"
+    },
+    {
+      "path": "assets/kudada/meshes/right_roll_Link.STL",
+      "bytes": 249484,
+      "sha256": "e8e8ade8fa82f8dfff8fc746d9ae821c077ed318e6a3ff0690a34cff8ca5ef11"
+    },
+    {
+      "path": "assets/kudada/meshes/right_yaw_Link.STL",
+      "bytes": 682684,
+      "sha256": "9576a6eb2975427c5ca18df4bfef879c6b94f0ac6c00883e103895af0ca056b2"
+    },
+    {
+      "path": "configs/baseline.json",
+      "bytes": 1884,
+      "sha256": "99a5e0c21804126b2cd409767ec268a5369b3e9649714395c40340c1b81c364b"
+    },
+    {
+      "path": "configs/improve.json",
+      "bytes": 1887,
+      "sha256": "3f29b68a847e3a29b8936ae24fffec918df4e72c6e6c0406b96ea507855f4429"
+    },
+    {
+      "path": "course/__init__.py",
+      "bytes": 292,
+      "sha256": "155d44fbb63fa555298b17d1661c176475279ebe7a2a288938280afc360fae9a"
+    },
+    {
+      "path": "course/cli.py",
+      "bytes": 5913,
+      "sha256": "a5b5ddfb1b0185ad4f21ce6ea10115cb88f4b931e2269758ec9e74e008a99f94"
+    },
+    {
+      "path": "course/compare.py",
+      "bytes": 9487,
+      "sha256": "8ba9bc0bceda0e3776cb6134e6be333cae59b78f8be276f8ae68e237e7b1333f"
+    },
+    {
+      "path": "course/evaluate.py",
+      "bytes": 10723,
+      "sha256": "76a71ff8c9de137e9b294922b95c0d808b9e4b1d46b55c2a2f4ea7867769a1e5"
+    },
+    {
+      "path": "course/mujoco_play.py",
+      "bytes": 7311,
+      "sha256": "a83ba027fed864ef629e222328a93241ab1c07d031f0f1c21f3d257d9060189a"
+    },
+    {
+      "path": "course/runtime.py",
+      "bytes": 6497,
+      "sha256": "85a40b6da28d08175e75e5547026f0a14094d6beeb17d0a65eaab9b50d267011"
+    },
+    {
+      "path": "course/source_binding.py",
+      "bytes": 3959,
+      "sha256": "b3ae662e53c8fe740e50d4cb2933a13b7b4e72474495d3c72dbb4088828e2e71"
+    },
+    {
+      "path": "course/train.py",
+      "bytes": 12710,
+      "sha256": "10367fecc6040e37a82f0ee32130c85f9ef2505bb8bf0ae6caeddddd75c03664"
+    },
+    {
+      "path": "docs/preclass_preparation.md",
+      "bytes": 5399,
+      "sha256": "cf41d4b94a62a0af4611e6826c90524c3fd49646bcb098da97fae4bd61dec5db"
+    },
+    {
+      "path": "docs/student_lab.md",
+      "bytes": 5255,
+      "sha256": "4ee42f1bdf73040189826433f1edc7681df70e320439411c8ac4664cd297ac18"
+    },
+    {
+      "path": "docs/troubleshooting.md",
+      "bytes": 2233,
+      "sha256": "ca7c0bcd0cfae44dc76d7c988a7596002088ddc4c730f549cf35ea76fd47a3df"
+    },
+    {
+      "path": "install-conda.ps1",
+      "bytes": 1279,
+      "sha256": "fcebd21fa8d01cf5dd5bfde27a9c140e6187dfacee9dce5ab36db79098841f29"
+    },
+    {
+      "path": "install.ps1",
+      "bytes": 3552,
+      "sha256": "42511f3936e7c98d3b31cc0956493b10f8f08fd9cd1708210cbbd1f1a19f8bc3"
+    },
+    {
+      "path": "install.sh",
+      "bytes": 670,
+      "sha256": "0d1fc4a99e437f7ef6112148dc3b7057cb6d7da662e6d45380777f19a92de3cb"
+    },
+    {
+      "path": "kudada_motrix/__init__.py",
+      "bytes": 83,
+      "sha256": "d66a5ee38fd5f764fd4e88284ac959ee69c6c01d28102ee3ad2ddf6007cb0c7e"
+    },
+    {
+      "path": "kudada_motrix/backend.py",
+      "bytes": 3301,
+      "sha256": "29bce83f7c4215259996c4589038a158279e2cf6485866a1e5bebe591cd4bbda"
+    },
+    {
+      "path": "kudada_motrix/cfg.py",
+      "bytes": 4306,
+      "sha256": "07802399ec72643be750704eff690a6cbc81af87ea44502cdbdad84882abd972"
+    },
+    {
+      "path": "kudada_motrix/constants.py",
+      "bytes": 913,
+      "sha256": "54a8fe15f2140956c82bd8ad2b5135c849a74df435195f5388f714c32d58c78d"
+    },
+    {
+      "path": "kudada_motrix/contract.py",
+      "bytes": 1839,
+      "sha256": "c7ebcfb83959029d4317fb30f32da3c8592351440acc4d79465c893cf2d3e73b"
+    },
+    {
+      "path": "kudada_motrix/env.py",
+      "bytes": 24090,
+      "sha256": "cfd8842671e66b42e4c29c18105ca97167e68b73ff0726f2c6bca25b6dd05dd3"
+    },
+    {
+      "path": "kudada_motrix/follow_renderer.py",
+      "bytes": 1028,
+      "sha256": "c5be19197dbb22b7e8b4f96ae2c46467b4956a6f55e303670d81ad2efc9bd86a"
+    },
+    {
+      "path": "kudada_motrix/randomization.py",
+      "bytes": 4012,
+      "sha256": "8f4ea3dd697063caff4b7f7dbac63e394f0120acbdd0d6e87b58ed2dc71aa7da"
+    },
+    {
+      "path": "kudada_motrix/rewards.py",
+      "bytes": 3341,
+      "sha256": "38dd50e88b56e53eff6e84517034d9c753a0996f389c70c1be0b5c5fe9a06d45"
+    },
+    {
+      "path": "kudada_motrix/terrain.py",
+      "bytes": 10299,
+      "sha256": "fb76fd3dec7e8367a6c6047e124d2375176f111c3aca49d8aab44d8d87d1c5b6"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1761,
+      "sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e"
+    },
+    {
+      "path": "licenses/kudada.txt",
+      "bytes": 1761,
+      "sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e"
+    },
+    {
+      "path": "licenses/legged_gym.txt",
+      "bytes": 1761,
+      "sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e"
+    },
+    {
+      "path": "licenses/MotrixLab.txt",
+      "bytes": 11058,
+      "sha256": "e1c3344fd3bb9105da14e1554f8794b13974c9d06cd05fdb34871e19bb4f21e3"
+    },
+    {
+      "path": "licenses/rsl_rl.txt",
+      "bytes": 1674,
+      "sha256": "6234d0c42436e78326ed2cb9eae339a9674c37154e894f3a9b24f8c3cd4b5ee4"
+    },
+    {
+      "path": "models/manifest.json",
+      "bytes": 645,
+      "sha256": "13c5126dca5b194d11e1191d0234f1fcb244ada325a9f294554f333c550aaafa"
+    },
+    {
+      "path": "models/teaching_start.onnx",
+      "bytes": 397847,
+      "sha256": "7c59335dc6d579db6f75b499ca078019f5eca8f965b3d1cf7997f6011c1b9bc0"
+    },
+    {
+      "path": "models/teaching_start.pt",
+      "bytes": 2436678,
+      "sha256": "e2396d9719f88922804f04f8d533107b0192f5ca84512e93e6994cdbcbc9d272"
+    },
+    {
+      "path": "models/teaching_start.verification.json",
+      "bytes": 1117,
+      "sha256": "c30a181bba0c1bf22e3f8ef5cf13789f4ba7a74ff129a2a0338f5412029b03d3"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 1709,
+      "sha256": "8f72b261e7285f579f5dab2eb013e8609c6055be6d6966c726b10c347fc5b3e5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6370,
+      "sha256": "0dd529d1648c645dcbcc5221d8cb4aa2d7e3db260ae5fb5c1eb551e944eb2904"
+    },
+    {
+      "path": "references/tinker/binary_audit.md",
+      "bytes": 8926,
+      "sha256": "8cffac3b4c2e602992fdb182e7236b59c7a8e191e41c73c5f22e5458e478c2fc"
+    },
+    {
+      "path": "references/tinker/param_gait.yaml",
+      "bytes": 4341,
+      "sha256": "9832f52d57dc3783a657a7613c2f5013b082e31d94b4e60b543cebea006af863"
+    },
+    {
+      "path": "references/tinker/param_robot.yaml",
+      "bytes": 2656,
+      "sha256": "566043a994084ea69ec365d46ebac60f6489b4846eeb4e99e853697f10e6ff0f"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "bytes": 987,
+      "sha256": "adf0b3677fc6ede6a05da1c4a0688f03a65e066093cb7705fc19a76fec7d7ff8"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 385,
+      "sha256": "b219e894631efc63586cde8c384bd6dda341f65e4a68162219a6d95427ac0f03"
+    },
+    {
+      "path": "run.ps1",
+      "bytes": 846,
+      "sha256": "901c974f649bb0f36d6067b977be310c9fb8b944226ebea2179696611050e26b"
+    },
+    {
+      "path": "scratch_policy/__init__.py",
+      "bytes": 267,
+      "sha256": "389d8f8959b40ac101322d3a819c2a82fb8296ee20ba1dfe76088ff87924818f"
+    },
+    {
+      "path": "scratch_policy/env.py",
+      "bytes": 18547,
+      "sha256": "bdc6a0eca302e5a78447101287da9ec5860c5664f4cf378cdcb23e4c825e85e1"
+    },
+    {
+      "path": "scratch_policy/export.py",
+      "bytes": 7519,
+      "sha256": "997dcec5949913e5ba202cf894c504bacc4fda8d7569a901f9cba79de5795413"
+    },
+    {
+      "path": "scratch_policy/export_fixed.py",
+      "bytes": 8893,
+      "sha256": "04ea190cd57ad8f7456adfc261466a05b669d258eb73cc288f27b54f97b29bdc"
+    },
+    {
+      "path": "scratch_policy/export_fixed_yaw_him_v25.py",
+      "bytes": 6831,
+      "sha256": "979405e15c65d26830b37b20b747634fa51f15201e4cf17365700a877be794e1"
+    },
+    {
+      "path": "scratch_policy/ort_runtime.py",
+      "bytes": 2205,
+      "sha256": "2923c30550fb5aa58451cd06af907b04ee8fb50f26fe84df807abc25a73e81d3"
+    },
+    {
+      "path": "scratch_policy/policy.py",
+      "bytes": 6444,
+      "sha256": "6235f4d763758f445a2b0f767aeacb6a27ab111196db9adff712c7e2ea80fb42"
+    },
+    {
+      "path": "scratch_policy/policy_gyro_v4.py",
+      "bytes": 10332,
+      "sha256": "ce672e7c0a28cff5649adbe7a76857d275f997cae7be991a11e1b47e5650b8d1"
+    },
+    {
+      "path": "scratch_policy/policy_yaw_him_v25.py",
+      "bytes": 17328,
+      "sha256": "c1dee7c507ec8f15de0815e3556fb33167fe0879cb9a4f8bbb0914dbe1eca37f"
+    },
+    {
+      "path": "scratch_policy/policy_yaw_phase_v10.py",
+      "bytes": 9205,
+      "sha256": "a80127aa9deaa7203e88cb3fa268476f0b43f9e216682e89749f465a194616ea"
+    },
+    {
+      "path": "scratch_policy/row_adam_v11.py",
+      "bytes": 7329,
+      "sha256": "3315508e40921dffc8ac1fab4a957a3a4ca828a2729a347779b32054c4000ee4"
+    },
+    {
+      "path": "scratch_policy/straight_env_v2.py",
+      "bytes": 9381,
+      "sha256": "78c4535625ca792af0b81288aab2b70f6b202f2b334ecc533bcf83e077a26535"
+    },
+    {
+      "path": "scratch_policy/symmetry.py",
+      "bytes": 2680,
+      "sha256": "312543db306319690cc2e6fd8f736b368c72850afc5bc5ba1a75fa12dcbb5914"
+    },
+    {
+      "path": "scratch_policy/yaw_course_env_v7.py",
+      "bytes": 13827,
+      "sha256": "0ce2e0c80273abb59a64cb3857cba0a6c96dc51b5d4702eb484339d6ac3e9d29"
+    },
+    {
+      "path": "tinker_policy/__init__.py",
+      "bytes": 75,
+      "sha256": "73f7983024e927c52de789edfc1034787da67c763221a11d27682822e2b03bf0"
+    },
+    {
+      "path": "tinker_policy/contract.json",
+      "bytes": 3421,
+      "sha256": "ac4abba9683d3e4a7d252fec274de2a509b2b679aa373e918444675868eb3457"
+    },
+    {
+      "path": "tinker_policy/env.py",
+      "bytes": 16586,
+      "sha256": "62c5083ccb41d80ee30711a93bbccc90ac5a5e68c26968358545df39d6c395d5"
+    },
+    {
+      "path": "vendor/motrix_env_core/pyproject.toml",
+      "bytes": 1898,
+      "sha256": "08c484c137ef3a0e92b2a0d8c92673fc60206396bb3e5e46d01cfee25cf5097c"
+    },
+    {
+      "path": "vendor/motrix_env_core/README.md",
+      "bytes": 1982,
+      "sha256": "9b518c824101fd03fb75906ddf7f66afcdd8e03717260943b6972c504641889a"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/__init__.py",
+      "bytes": 1638,
+      "sha256": "b8ecb6a5caa937eeea0d3da8796d001dfbaabfe9a326bd6a6ba9127ccd11bdfe"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/array/__init__.py",
+      "bytes": 94,
+      "sha256": "9ddbb86190ee73b7ca1b31a65cf8717cd4fa07ffcb962645f7c402a8a0fcc195"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/array/env.py",
+      "bytes": 12257,
+      "sha256": "aa9e1b98fabfb9840140c5542c16bd3bca546836d36c31ff2ab6c95413ed0aa2"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/array_api.py",
+      "bytes": 1241,
+      "sha256": "207911f4ea592ce71346f16948b7dd3fef65ad26f37f2ed6a966a2b777b2da39"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/base.py",
+      "bytes": 2760,
+      "sha256": "cbb74d20486b16b8be129c8e1087d66171c81c95b6344e8560194b5a1edace0f"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/__init__.py",
+      "bytes": 348,
+      "sha256": "cfb98a438bb032b46f401da0068ffe3bd946f34f8fd8df4e23141c02de3bc88b"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/decorate.py",
+      "bytes": 4420,
+      "sha256": "4f0bcfc5f6a6a8afd836b4f9aac2ea58fd40bd28c92fd88d77783481bc9977ea"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/__init__.py",
+      "bytes": 2913,
+      "sha256": "509c4f5d1bd977779a86e647c083a6c9eccc03d73683e053b17ea89a5fa1a70a"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/_utils.py",
+      "bytes": 822,
+      "sha256": "1b37616d36f56a292b779c9736c0ebbbef07140c147a755dbfa570f807632d00"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/asset.py",
+      "bytes": 7679,
+      "sha256": "5306e430c6b7cae0f37adf66f327899f60e38cff9430543095e06fb1540201d4"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/base.py",
+      "bytes": 11883,
+      "sha256": "1c429b65f81160714ce5cf8bf88cb8d37258e6bde6e66670a48fdf48b2650112"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/compiler.py",
+      "bytes": 643,
+      "sha256": "852c793c5469a127806ed376622bde2e46f3c27f542302d0abe7860b33b40a9e"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/geometry.py",
+      "bytes": 1255,
+      "sha256": "1897318519925b3d00228ffd88f203d695ef98d8a86334dafc1d219b9f0834e6"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/light.py",
+      "bytes": 959,
+      "sha256": "cb303dbbb40a9f60c1d5be50b0607ec4b07473f0f408675e8563081d9b65411d"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/mjcf.py",
+      "bytes": 313,
+      "sha256": "0bb884d1607dd8e43e40869a001f756b2b388b943fd3f1e57144a7be0c23aaef"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/sensor.py",
+      "bytes": 4599,
+      "sha256": "52446c2987dfb39f7b25673721ad334e38470039979dec7d2955415ccdbeb210"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/terrain.py",
+      "bytes": 26279,
+      "sha256": "b4b29d654b4d3b5f99a869d28a489b6229954b406cbaa1bf729bd204f551a41c"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/urdf.py",
+      "bytes": 4858,
+      "sha256": "a998d885b1f7749092011d9d7bafc1f66705cf2b3a45d5456511e4c426047baf"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/scene/validation.py",
+      "bytes": 3045,
+      "sha256": "7fd4134b4dab67123a3cf32b092b132b8241e7867a3cd6010520ffdb46631260"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/sim.py",
+      "bytes": 1072,
+      "sha256": "2ad0ae257d7391df9485da2902b523c5eed826da2b7192f71b2d10dac7f00b85"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/config/sim_reset.py",
+      "bytes": 1362,
+      "sha256": "0c118ad8528ca4a5014a6fc5ddf0cf605689c6db5c52e454942fb9c5c523af0d"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/direct/__init__.py",
+      "bytes": 287,
+      "sha256": "96d37c175347057cd182a59107ba636a7e04903ff4c08858f343162807dd8414"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/direct/env.py",
+      "bytes": 2451,
+      "sha256": "4c3e66010a12331f704ab3a62586a9a60e3f0be514eb22d5e28b5518b3f8ce55"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/direct/reward.py",
+      "bytes": 2287,
+      "sha256": "3c6ae1d138929e85ac1e7bc817b40b954f6d0f61011c75229b247313ef0f23c4"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/input/__init__.py",
+      "bytes": 830,
+      "sha256": "79fbb24d2ef10c15680f6791e8108787a8551f3e75f38c5ae68892a2b4b4c25d"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/input/bindings.py",
+      "bytes": 9671,
+      "sha256": "05dab5dad9502799be38bcc7b98ca254abc62073eb8fdbc7e4333e9079096770"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/input/command.py",
+      "bytes": 1344,
+      "sha256": "1d8cc7579a1d39e51575b397a5fd2b38024bd4fe0c15a4d159c90b0e77584a80"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/input/device.py",
+      "bytes": 1851,
+      "sha256": "b18da4816244030d550cce0765c533a4685e9157511c304f0030d10a08e6c395"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/manager/__init__.py",
+      "bytes": 2168,
+      "sha256": "a75ca9f996ca57a61701aafce6910a679967689953dba469b2fa73d4d2e594bd"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/manager/math/__init__.py",
+      "bytes": 236,
+      "sha256": "73ba96ed263a668eae037a272de43f24cd4b0438b78fee9a980a5f6098131ac7"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/manager/math/quaternion.py",
+      "bytes": 453,
+      "sha256": "8abd9ff7b7defff3870ee23b4f9a32c5aa10957745d27453385effd7ff8a190b"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/math/__init__.py",
+      "bytes": 183,
+      "sha256": "77a29f5c7ced2a94bdb4eba0216e11405b68a8f32f81c87bfaeb958bb28f7e98"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/math/quaternion.py",
+      "bytes": 10505,
+      "sha256": "f4fd09a3e4b3e43d6dc5ee759f4ebfd19f867b4cfb1e51571c811955f9412ae5"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/math/utils.py",
+      "bytes": 1485,
+      "sha256": "708392db9a1077f6741dbcff6defe490ea63255932f13ac2ecb7c3d12b139db6"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/mdp/__init__.py",
+      "bytes": 158,
+      "sha256": "f35093b651b4d9d59aab101e8d0cbb85664c242c26b565b582f2ada140a5e8f9"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/mdp/noise.py",
+      "bytes": 1133,
+      "sha256": "60184e464ee06d4a58f9d3d79d2a680fd7bfebff32f0636e93b2ce3caa00ca13"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/mdp/observations.py",
+      "bytes": 8227,
+      "sha256": "ff5573b7d2deb43777b52158dad446d774e4d9f682757d1278c84ae12ffb9bc6"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/mdp/rewards.py",
+      "bytes": 3966,
+      "sha256": "d001b6523a52ad9054cb21c45ea05162e6d2910db2993663d70cb1ee6a4c1dfd"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/mdp/state.py",
+      "bytes": 619,
+      "sha256": "3accb2f3bd34353e4e98566bad4a59b523e8025c67cb694c92d346cfa1c867f0"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/mdp/terminations.py",
+      "bytes": 1511,
+      "sha256": "5f815e12eaaca5a75e17ca407794c2e995610072e9b08345714ee676ece684f1"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/mdp/terrain.py",
+      "bytes": 3015,
+      "sha256": "a5a87f45c39d68c7770767da4db1a36d5270f813a8a3300a8dcccfe412343112"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/__init__.py",
+      "bytes": 392,
+      "sha256": "30475719288b3e51da7b80ba261b212e4867d86fb9e1c96d66a78f2edba7437c"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel.py",
+      "bytes": 5004,
+      "sha256": "77c84816767384bb83e843eda749182b9964e8e5172c464d0dcf425198777562"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/__init__.py",
+      "bytes": 1526,
+      "sha256": "db39577b688ddac7754db43d55841aa0031625772106f4ad6720f016bf1b2fa6"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/canonical.py",
+      "bytes": 1035,
+      "sha256": "e7dcefbafde26d2353e5b6bca4fbb40b6d9ea0a9f18fc24faccc2b3363b8a1e4"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/lowering.py",
+      "bytes": 16432,
+      "sha256": "18ebd5bc44d6ff91cd705523f6251567043041651647b519176cfa258f7c03f1"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/map.py",
+      "bytes": 3926,
+      "sha256": "fce907a3e6ed4d57f138f3956551b01e21ca7b83326562b5e00b6ce186d380fd"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/tree.py",
+      "bytes": 13282,
+      "sha256": "ac3e050269718b2fdae6165e813c77e9952290fe3b2d695d149afa823fe3c9f0"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/__init__.py",
+      "bytes": 140,
+      "sha256": "5fffc1e1fe7c8e1333ed57b3c027d48f7b08d20f4000b9194bc6f1cda750b464"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/actions.py",
+      "bytes": 2119,
+      "sha256": "2843e2a57817acb967c1df45fe49788eef0a7e273287927ddb9efff28f1e2197"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/commands.py",
+      "bytes": 3469,
+      "sha256": "c11cd4ea6830e2f4d33d05b3113bd8f5c525e4105b15f13e50f2e71e739405ff"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/__init__.py",
+      "bytes": 648,
+      "sha256": "d1fe8e71f2b86d1e6b57afac598a1018519b9a38b5b8deafc470d1e83e1b8f48"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/cache.py",
+      "bytes": 3871,
+      "sha256": "6e359455a798bcfb022c9e028b6e72072ba80e5d816fb2123e18817aa24e2fe0"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/codegen.py",
+      "bytes": 9345,
+      "sha256": "bb614b4d439741e46c7bdea395b449676485d9bff293f3dfc6b7bdba52535ef9"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/compiler.py",
+      "bytes": 45740,
+      "sha256": "10061bfcac105f9c6e79c5afc37ce10a57156605daa7652dfddb13a8c32c4512"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/fingerprint.py",
+      "bytes": 2487,
+      "sha256": "6d5fd100eb4fafa6758b4cb140e0a655a930b92d8d458da1419ac19901a3d3be"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/plan.py",
+      "bytes": 3218,
+      "sha256": "779e05d03623c6bbe2bc6642587e187b30cdfae9c80e1ecff4bbe29b779acd8f"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/program.py",
+      "bytes": 1289,
+      "sha256": "6fdf51026226e3b80eea5f3315d03c2c42fb43d95d260bc5dd8a420be256f44d"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/context.py",
+      "bytes": 2394,
+      "sha256": "8087e012e543778a1cd8002375a70c7cce1ae9e2ed1902507e0ea21f9292a37c"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/dispatch.py",
+      "bytes": 952,
+      "sha256": "6fe9f641989decb708def641038f44ea2a18e98c65e47b1b732b3eaac73769f4"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/env.py",
+      "bytes": 40775,
+      "sha256": "eb2904bc9dd513cb5433e5db2fa76d0ee41fbb2b539e8df7825b1a0cfd5d5111"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/metrics.py",
+      "bytes": 3319,
+      "sha256": "4710ec533aa64659e99530f05c7f588087fccd75200d65ba82c60940dd5b5e98"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/observations.py",
+      "bytes": 5247,
+      "sha256": "e611f3dededf5bd79caa2b2e8c014c5139435b2b5fdcb4500f68d5253bcbfaa3"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/rand.py",
+      "bytes": 3715,
+      "sha256": "2fff5e9b0a8c1b9dcc187967860c11c015e342294328ac35b900fcd3e6272fe2"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/rewards.py",
+      "bytes": 2421,
+      "sha256": "902204ed2435661822ba7f50186a2dc4dde428b2280386feeacebf4c491170cf"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/sim_reset.py",
+      "bytes": 4526,
+      "sha256": "87e1409387b8d7be78ec980ae555498568d18b2f80487260cae0bf9df996d36f"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/terminations.py",
+      "bytes": 4539,
+      "sha256": "3407429cd0057fafa871c90a200597f62cc1e817a895c1000ad824253cabf3af"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/terms.py",
+      "bytes": 2643,
+      "sha256": "a98150adb6614e6e6fa0c064985143c1d3ba4099529ef401c7cc221b83c3e196"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/math/__init__.py",
+      "bytes": 132,
+      "sha256": "cb8c5c88cb355f18c18ad152feddaa960b9514b4fa1979d30a5044e2a19bd6fe"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/math/quaternion.py",
+      "bytes": 5427,
+      "sha256": "aac49ba8a1dc8dc975252dfc1d913932f44aba35f18aa885e62d89594fe94ebe"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/program.py",
+      "bytes": 495,
+      "sha256": "8ddc21f9a290e41299525f310132b7bc7b855772b30b3b9cceb6d150325b94f0"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/numba/threading.py",
+      "bytes": 2203,
+      "sha256": "0f86f08c81e2289a6cdfc71ee0d4efc5b13c22cabf43507dfe25f0f2502e4d85"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/perf.py",
+      "bytes": 10164,
+      "sha256": "632f01c55ec030d5e6d89b21d180f09fea31d75c49f1238b8706070c9b5eeaff"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/registry.py",
+      "bytes": 13211,
+      "sha256": "cb7b0a53186ab8a6a63b7345f758b50dd7a04bdbf2a954de37726cc92004e91c"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/renderer.py",
+      "bytes": 4782,
+      "sha256": "979643336bb7836dd515cfe53c3f11b76a1e2666c6a3c42c03ba739634d8afbe"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/sim/__init__.py",
+      "bytes": 3199,
+      "sha256": "cae0aa08c65c02bd9fae06f25d32bc88105f1283c66acb67b29c6bfb2221f532"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/sim/backend.py",
+      "bytes": 8854,
+      "sha256": "2448c241551e939f87dbafd9f6a9534aaf6a91c1ae82a3b3eb8c9acbe7fe928e"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/sim/body.py",
+      "bytes": 8103,
+      "sha256": "2e18a817251c27cb01dbddb44de5494d2206451a1f1391d34a51b993158544b8"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/sim/config.py",
+      "bytes": 1439,
+      "sha256": "ee7ec4ffae094fd57f830be966524ee84e9f46d2138cd27e2856ca6a03a77092"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/sim/model.py",
+      "bytes": 13571,
+      "sha256": "5d2f023f28508d660988a401ddf3f4912fbd29986ee943507532d3fd2e497e0e"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/sim/read.py",
+      "bytes": 17884,
+      "sha256": "b34e020e3dac6c5aebe3f115dfa9efcdd8c3eee357cf11a930f74a34d6d3c269"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/sim/registry.py",
+      "bytes": 4331,
+      "sha256": "398b9da9b440381ef0a708e5a8c1f95fedb3654b566d62ec2020b9b7318cc357"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/sim/write.py",
+      "bytes": 12396,
+      "sha256": "f4f1c71ecf3350d159f3d48078faece0a78e8c34d9c5fca3e1e23b4145e4dbd4"
+    },
+    {
+      "path": "vendor/motrix_env_core/src/motrix_env_core/torch/reward.py",
+      "bytes": 2396,
+      "sha256": "f08e5033b0e91613715907aa2e39f956f3de0d7b903339133d866c0928c6507a"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/pyproject.toml",
+      "bytes": 583,
+      "sha256": "3b3405e7f0cccc3ce2c06104ee306a2d2f96ea373cd981d237e1fa4beedf5c7e"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/README.md",
+      "bytes": 825,
+      "sha256": "a26be065ef636fd49cba480130cb83855e8b48aa9f5374f7dc975d584c5fb0a5"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/__init__.py",
+      "bytes": 674,
+      "sha256": "b74d00c340304ce0b3d846353313b897b6b7c3b5d16aa7bf2db40fef3cac10ac"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/compiler.py",
+      "bytes": 13483,
+      "sha256": "dee1ffb21477d95a7476db90cc589d1e0aad9e99aab91ad51ed662815744764a"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/register.py",
+      "bytes": 667,
+      "sha256": "3e7b8aae15f0b84414b5ee53bf6e114935a45115f7e4bb15dffbc1aa24758f72"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/renderer.py",
+      "bytes": 6186,
+      "sha256": "87f3c3c7d0f35bfc334dfcc80649b2b4e7ca72be256227a0e081eb79e4a38786"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/runtime.py",
+      "bytes": 15746,
+      "sha256": "afa495e4359a4112ca9e731c1be376fb6dcd106f8b27c2383347444dd823428a"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/sim_data.py",
+      "bytes": 16785,
+      "sha256": "db767394f013bf889e9eac3020a41895690c3047fa17ca438256f9d595026dd2"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/torch_env.py",
+      "bytes": 11913,
+      "sha256": "30bbef3360aff1c9f9d43ec2fa38b1999692983395cb71ae1b367c7f267817e0"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/urdf.py",
+      "bytes": 7012,
+      "sha256": "78082a6135929bc7cfa2106f538822c2efaced3161e82789abcf7b6d40b19a78"
+    },
+    {
+      "path": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/write_compiler.py",
+      "bytes": 17654,
+      "sha256": "7f83794c5cf2e9e7fb52b87f2c62cf534a6cbb5feb883abb9018252fdac3938e"
+    }
+  ],
+  "delivery_file_count": 173,
+  "delivery_total_bytes": 8755893,
+  "origin_records": [
+    {
+      "relative": "scratch_policy/__init__.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\__init__.py",
+      "origin_sha256": "389d8f8959b40ac101322d3a819c2a82fb8296ee20ba1dfe76088ff87924818f",
+      "copied_sha256": "389d8f8959b40ac101322d3a819c2a82fb8296ee20ba1dfe76088ff87924818f",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/env.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\env.py",
+      "origin_sha256": "bdc6a0eca302e5a78447101287da9ec5860c5664f4cf378cdcb23e4c825e85e1",
+      "copied_sha256": "bdc6a0eca302e5a78447101287da9ec5860c5664f4cf378cdcb23e4c825e85e1",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/export.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\export.py",
+      "origin_sha256": "997dcec5949913e5ba202cf894c504bacc4fda8d7569a901f9cba79de5795413",
+      "copied_sha256": "997dcec5949913e5ba202cf894c504bacc4fda8d7569a901f9cba79de5795413",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/export_fixed.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\export_fixed.py",
+      "origin_sha256": "04ea190cd57ad8f7456adfc261466a05b669d258eb73cc288f27b54f97b29bdc",
+      "copied_sha256": "04ea190cd57ad8f7456adfc261466a05b669d258eb73cc288f27b54f97b29bdc",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/export_fixed_yaw_him_v25.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\export_fixed_yaw_him_v25.py",
+      "origin_sha256": "979405e15c65d26830b37b20b747634fa51f15201e4cf17365700a877be794e1",
+      "copied_sha256": "979405e15c65d26830b37b20b747634fa51f15201e4cf17365700a877be794e1",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/ort_runtime.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\ort_runtime.py",
+      "origin_sha256": "2923c30550fb5aa58451cd06af907b04ee8fb50f26fe84df807abc25a73e81d3",
+      "copied_sha256": "2923c30550fb5aa58451cd06af907b04ee8fb50f26fe84df807abc25a73e81d3",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/policy.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\policy.py",
+      "origin_sha256": "6235f4d763758f445a2b0f767aeacb6a27ab111196db9adff712c7e2ea80fb42",
+      "copied_sha256": "6235f4d763758f445a2b0f767aeacb6a27ab111196db9adff712c7e2ea80fb42",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/policy_gyro_v4.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\policy_gyro_v4.py",
+      "origin_sha256": "ce672e7c0a28cff5649adbe7a76857d275f997cae7be991a11e1b47e5650b8d1",
+      "copied_sha256": "ce672e7c0a28cff5649adbe7a76857d275f997cae7be991a11e1b47e5650b8d1",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/policy_yaw_him_v25.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\policy_yaw_him_v25.py",
+      "origin_sha256": "c1dee7c507ec8f15de0815e3556fb33167fe0879cb9a4f8bbb0914dbe1eca37f",
+      "copied_sha256": "c1dee7c507ec8f15de0815e3556fb33167fe0879cb9a4f8bbb0914dbe1eca37f",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/policy_yaw_phase_v10.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\policy_yaw_phase_v10.py",
+      "origin_sha256": "a80127aa9deaa7203e88cb3fa268476f0b43f9e216682e89749f465a194616ea",
+      "copied_sha256": "a80127aa9deaa7203e88cb3fa268476f0b43f9e216682e89749f465a194616ea",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/row_adam_v11.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\row_adam_v11.py",
+      "origin_sha256": "3315508e40921dffc8ac1fab4a957a3a4ca828a2729a347779b32054c4000ee4",
+      "copied_sha256": "3315508e40921dffc8ac1fab4a957a3a4ca828a2729a347779b32054c4000ee4",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/straight_env_v2.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\straight_env_v2.py",
+      "origin_sha256": "78c4535625ca792af0b81288aab2b70f6b202f2b334ecc533bcf83e077a26535",
+      "copied_sha256": "78c4535625ca792af0b81288aab2b70f6b202f2b334ecc533bcf83e077a26535",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/symmetry.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\symmetry.py",
+      "origin_sha256": "312543db306319690cc2e6fd8f736b368c72850afc5bc5ba1a75fa12dcbb5914",
+      "copied_sha256": "312543db306319690cc2e6fd8f736b368c72850afc5bc5ba1a75fa12dcbb5914",
+      "unchanged": true
+    },
+    {
+      "relative": "scratch_policy/yaw_course_env_v7.py",
+      "origin": "kudada_rl_motrix\\scratch_policy\\yaw_course_env_v7.py",
+      "origin_sha256": "0ce2e0c80273abb59a64cb3857cba0a6c96dc51b5d4702eb484339d6ac3e9d29",
+      "copied_sha256": "0ce2e0c80273abb59a64cb3857cba0a6c96dc51b5d4702eb484339d6ac3e9d29",
+      "unchanged": true
+    },
+    {
+      "relative": "tinker_policy/__init__.py",
+      "origin": "kudada_rl_motrix\\tinker_policy\\__init__.py",
+      "origin_sha256": "73f7983024e927c52de789edfc1034787da67c763221a11d27682822e2b03bf0",
+      "copied_sha256": "73f7983024e927c52de789edfc1034787da67c763221a11d27682822e2b03bf0",
+      "unchanged": true
+    },
+    {
+      "relative": "tinker_policy/contract.json",
+      "origin": "kudada_rl_motrix\\tinker_policy\\contract.json",
+      "origin_sha256": "ac4abba9683d3e4a7d252fec274de2a509b2b679aa373e918444675868eb3457",
+      "copied_sha256": "ac4abba9683d3e4a7d252fec274de2a509b2b679aa373e918444675868eb3457",
+      "unchanged": true
+    },
+    {
+      "relative": "tinker_policy/env.py",
+      "origin": "kudada_rl_motrix\\tinker_policy\\env.py",
+      "origin_sha256": "62c5083ccb41d80ee30711a93bbccc90ac5a5e68c26968358545df39d6c395d5",
+      "copied_sha256": "62c5083ccb41d80ee30711a93bbccc90ac5a5e68c26968358545df39d6c395d5",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/__init__.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\__init__.py",
+      "origin_sha256": "e593ac93126d8ad2452e1eb8acbde169f5d542e5d2e52bbcfcb242004416bf16",
+      "copied_sha256": "d66a5ee38fd5f764fd4e88284ac959ee69c6c01d28102ee3ad2ddf6007cb0c7e",
+      "unchanged": false
+    },
+    {
+      "relative": "kudada_motrix/backend.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\backend.py",
+      "origin_sha256": "29bce83f7c4215259996c4589038a158279e2cf6485866a1e5bebe591cd4bbda",
+      "copied_sha256": "29bce83f7c4215259996c4589038a158279e2cf6485866a1e5bebe591cd4bbda",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/cfg.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\cfg.py",
+      "origin_sha256": "07802399ec72643be750704eff690a6cbc81af87ea44502cdbdad84882abd972",
+      "copied_sha256": "07802399ec72643be750704eff690a6cbc81af87ea44502cdbdad84882abd972",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/constants.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\constants.py",
+      "origin_sha256": "54a8fe15f2140956c82bd8ad2b5135c849a74df435195f5388f714c32d58c78d",
+      "copied_sha256": "54a8fe15f2140956c82bd8ad2b5135c849a74df435195f5388f714c32d58c78d",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/contract.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\contract.py",
+      "origin_sha256": "c7ebcfb83959029d4317fb30f32da3c8592351440acc4d79465c893cf2d3e73b",
+      "copied_sha256": "c7ebcfb83959029d4317fb30f32da3c8592351440acc4d79465c893cf2d3e73b",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/env.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\env.py",
+      "origin_sha256": "cfd8842671e66b42e4c29c18105ca97167e68b73ff0726f2c6bca25b6dd05dd3",
+      "copied_sha256": "cfd8842671e66b42e4c29c18105ca97167e68b73ff0726f2c6bca25b6dd05dd3",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/follow_renderer.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\follow_renderer.py",
+      "origin_sha256": "c5be19197dbb22b7e8b4f96ae2c46467b4956a6f55e303670d81ad2efc9bd86a",
+      "copied_sha256": "c5be19197dbb22b7e8b4f96ae2c46467b4956a6f55e303670d81ad2efc9bd86a",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/randomization.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\randomization.py",
+      "origin_sha256": "8f4ea3dd697063caff4b7f7dbac63e394f0120acbdd0d6e87b58ed2dc71aa7da",
+      "copied_sha256": "8f4ea3dd697063caff4b7f7dbac63e394f0120acbdd0d6e87b58ed2dc71aa7da",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/rewards.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\rewards.py",
+      "origin_sha256": "38dd50e88b56e53eff6e84517034d9c753a0996f389c70c1be0b5c5fe9a06d45",
+      "copied_sha256": "38dd50e88b56e53eff6e84517034d9c753a0996f389c70c1be0b5c5fe9a06d45",
+      "unchanged": true
+    },
+    {
+      "relative": "kudada_motrix/terrain.py",
+      "origin": "kudada_rl_motrix\\kudada_motrix\\terrain.py",
+      "origin_sha256": "fb76fd3dec7e8367a6c6047e124d2375176f111c3aca49d8aab44d8d87d1c5b6",
+      "copied_sha256": "fb76fd3dec7e8367a6c6047e124d2375176f111c3aca49d8aab44d8d87d1c5b6",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/check_kudada_urdf.py",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\check_kudada_urdf.py",
+      "origin_sha256": "2cc41d8ecddcbc53ee943c894d7500e956c04fd012035d38d1434112032412e2",
+      "copied_sha256": "2cc41d8ecddcbc53ee943c894d7500e956c04fd012035d38d1434112032412e2",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/kudada_lingzu.urdf",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\kudada_lingzu.urdf",
+      "origin_sha256": "7130fb3f3d26af03aaab435ea3a7a0a6a723668fa0340baff88e0048b797ac59",
+      "copied_sha256": "7130fb3f3d26af03aaab435ea3a7a0a6a723668fa0340baff88e0048b797ac59",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/kudada_lingzu.xml",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\kudada_lingzu.xml",
+      "origin_sha256": "2bb5a87a3d46472aca5bd4275804945363c5ad41db08965cc6939179d288adcf",
+      "copied_sha256": "2bb5a87a3d46472aca5bd4275804945363c5ad41db08965cc6939179d288adcf",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/base_link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\base_link.STL",
+      "origin_sha256": "03c1b93d8c6a58e341533af0d37d48cfccda9006c8676881523b2797b98ab28c",
+      "copied_sha256": "03c1b93d8c6a58e341533af0d37d48cfccda9006c8676881523b2797b98ab28c",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/left_hip_pitch_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\left_hip_pitch_Link.STL",
+      "origin_sha256": "ac1969648a53913fc1dfd58490d8b49a232039617baaf63dfc52d84e5c53f7d5",
+      "copied_sha256": "ac1969648a53913fc1dfd58490d8b49a232039617baaf63dfc52d84e5c53f7d5",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/left_knee_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\left_knee_Link.STL",
+      "origin_sha256": "e8be95aa1f80c2aa1e76875c43e44dd9ce4b92a08ee72d2a9593d04cfecdc865",
+      "copied_sha256": "e8be95aa1f80c2aa1e76875c43e44dd9ce4b92a08ee72d2a9593d04cfecdc865",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/left_leg_pitch_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\left_leg_pitch_Link.STL",
+      "origin_sha256": "8e6cc346624230c4820cb23685f08fe9661e9ff5c93abe713fe9502b57301b60",
+      "copied_sha256": "8e6cc346624230c4820cb23685f08fe9661e9ff5c93abe713fe9502b57301b60",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/left_roll_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\left_roll_Link.STL",
+      "origin_sha256": "73692c26da4d5457d2628d1e2aac0ff5fb25bb6291d20d5b24b75ddcf0b59678",
+      "copied_sha256": "73692c26da4d5457d2628d1e2aac0ff5fb25bb6291d20d5b24b75ddcf0b59678",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/left_yaw_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\left_yaw_Link.STL",
+      "origin_sha256": "e897135d30703912323eebf960cbdb1426ffbee0fd5e9c5c153274a6f36113c2",
+      "copied_sha256": "e897135d30703912323eebf960cbdb1426ffbee0fd5e9c5c153274a6f36113c2",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/right_hip_pitch_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\right_hip_pitch_Link.STL",
+      "origin_sha256": "8ea06eaea96e4dc15002482a587d5ae2d90d345c28b2ddc80cbe53688e231bda",
+      "copied_sha256": "8ea06eaea96e4dc15002482a587d5ae2d90d345c28b2ddc80cbe53688e231bda",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/right_knee_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\right_knee_Link.STL",
+      "origin_sha256": "539825e3daff2603222ccb85e11d58a73c9d765656fd8bc0d8ba0f395c9f7d56",
+      "copied_sha256": "539825e3daff2603222ccb85e11d58a73c9d765656fd8bc0d8ba0f395c9f7d56",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/right_leg_pitch_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\right_leg_pitch_Link.STL",
+      "origin_sha256": "347a4a099f3010d37c52aa9747888f7ec3c3d2150b815dfee8a934698be85e56",
+      "copied_sha256": "347a4a099f3010d37c52aa9747888f7ec3c3d2150b815dfee8a934698be85e56",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/right_roll_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\right_roll_Link.STL",
+      "origin_sha256": "e8e8ade8fa82f8dfff8fc746d9ae821c077ed318e6a3ff0690a34cff8ca5ef11",
+      "copied_sha256": "e8e8ade8fa82f8dfff8fc746d9ae821c077ed318e6a3ff0690a34cff8ca5ef11",
+      "unchanged": true
+    },
+    {
+      "relative": "assets/kudada/meshes/right_yaw_Link.STL",
+      "origin": "kudada_rl_motrix\\assets\\kudada\\meshes\\right_yaw_Link.STL",
+      "origin_sha256": "9576a6eb2975427c5ca18df4bfef879c6b94f0ac6c00883e103895af0ca056b2",
+      "copied_sha256": "9576a6eb2975427c5ca18df4bfef879c6b94f0ac6c00883e103895af0ca056b2",
+      "unchanged": true
+    },
+    {
+      "relative": "references/tinker/binary_audit.md",
+      "origin": "kudada_rl_motrix\\references\\tinker\\binary_audit.md",
+      "origin_sha256": "8cffac3b4c2e602992fdb182e7236b59c7a8e191e41c73c5f22e5458e478c2fc",
+      "copied_sha256": "8cffac3b4c2e602992fdb182e7236b59c7a8e191e41c73c5f22e5458e478c2fc",
+      "unchanged": true
+    },
+    {
+      "relative": "references/tinker/param_gait.yaml",
+      "origin": "kudada_rl_motrix\\references\\tinker\\param_gait.yaml",
+      "origin_sha256": "9832f52d57dc3783a657a7613c2f5013b082e31d94b4e60b543cebea006af863",
+      "copied_sha256": "9832f52d57dc3783a657a7613c2f5013b082e31d94b4e60b543cebea006af863",
+      "unchanged": true
+    },
+    {
+      "relative": "references/tinker/param_robot.yaml",
+      "origin": "kudada_rl_motrix\\references\\tinker\\param_robot.yaml",
+      "origin_sha256": "566043a994084ea69ec365d46ebac60f6489b4846eeb4e99e853697f10e6ff0f",
+      "copied_sha256": "566043a994084ea69ec365d46ebac60f6489b4846eeb4e99e853697f10e6ff0f",
+      "unchanged": true
+    },
+    {
+      "relative": "licenses/kudada.txt",
+      "origin": "kudada_rl_motrix\\licenses\\kudada.txt",
+      "origin_sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e",
+      "copied_sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e",
+      "unchanged": true
+    },
+    {
+      "relative": "licenses/legged_gym.txt",
+      "origin": "kudada_rl_motrix\\licenses\\legged_gym.txt",
+      "origin_sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e",
+      "copied_sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e",
+      "unchanged": true
+    },
+    {
+      "relative": "licenses/MotrixLab.txt",
+      "origin": "kudada_rl_motrix\\licenses\\MotrixLab.txt",
+      "origin_sha256": "e1c3344fd3bb9105da14e1554f8794b13974c9d06cd05fdb34871e19bb4f21e3",
+      "copied_sha256": "e1c3344fd3bb9105da14e1554f8794b13974c9d06cd05fdb34871e19bb4f21e3",
+      "unchanged": true
+    },
+    {
+      "relative": "licenses/rsl_rl.txt",
+      "origin": "kudada_rl_motrix\\licenses\\rsl_rl.txt",
+      "origin_sha256": "6234d0c42436e78326ed2cb9eae339a9674c37154e894f3a9b24f8c3cd4b5ee4",
+      "copied_sha256": "6234d0c42436e78326ed2cb9eae339a9674c37154e894f3a9b24f8c3cd4b5ee4",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/pyproject.toml",
+      "origin": "MotrixLab/motrix_env_core/pyproject.toml",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "08c484c137ef3a0e92b2a0d8c92673fc60206396bb3e5e46d01cfee25cf5097c",
+      "copied_sha256": "08c484c137ef3a0e92b2a0d8c92673fc60206396bb3e5e46d01cfee25cf5097c",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/README.md",
+      "origin": "MotrixLab/motrix_env_core/README.md",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "9b518c824101fd03fb75906ddf7f66afcdd8e03717260943b6972c504641889a",
+      "copied_sha256": "9b518c824101fd03fb75906ddf7f66afcdd8e03717260943b6972c504641889a",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "b8ecb6a5caa937eeea0d3da8796d001dfbaabfe9a326bd6a6ba9127ccd11bdfe",
+      "copied_sha256": "b8ecb6a5caa937eeea0d3da8796d001dfbaabfe9a326bd6a6ba9127ccd11bdfe",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/array/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/array/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "9ddbb86190ee73b7ca1b31a65cf8717cd4fa07ffcb962645f7c402a8a0fcc195",
+      "copied_sha256": "9ddbb86190ee73b7ca1b31a65cf8717cd4fa07ffcb962645f7c402a8a0fcc195",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/array/env.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/array/env.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "aa9e1b98fabfb9840140c5542c16bd3bca546836d36c31ff2ab6c95413ed0aa2",
+      "copied_sha256": "aa9e1b98fabfb9840140c5542c16bd3bca546836d36c31ff2ab6c95413ed0aa2",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/array_api.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/array_api.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "207911f4ea592ce71346f16948b7dd3fef65ad26f37f2ed6a966a2b777b2da39",
+      "copied_sha256": "207911f4ea592ce71346f16948b7dd3fef65ad26f37f2ed6a966a2b777b2da39",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/base.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/base.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "cbb74d20486b16b8be129c8e1087d66171c81c95b6344e8560194b5a1edace0f",
+      "copied_sha256": "cbb74d20486b16b8be129c8e1087d66171c81c95b6344e8560194b5a1edace0f",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "cfb98a438bb032b46f401da0068ffe3bd946f34f8fd8df4e23141c02de3bc88b",
+      "copied_sha256": "cfb98a438bb032b46f401da0068ffe3bd946f34f8fd8df4e23141c02de3bc88b",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/decorate.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/decorate.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "4f0bcfc5f6a6a8afd836b4f9aac2ea58fd40bd28c92fd88d77783481bc9977ea",
+      "copied_sha256": "4f0bcfc5f6a6a8afd836b4f9aac2ea58fd40bd28c92fd88d77783481bc9977ea",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "509c4f5d1bd977779a86e647c083a6c9eccc03d73683e053b17ea89a5fa1a70a",
+      "copied_sha256": "509c4f5d1bd977779a86e647c083a6c9eccc03d73683e053b17ea89a5fa1a70a",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/_utils.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/_utils.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "1b37616d36f56a292b779c9736c0ebbbef07140c147a755dbfa570f807632d00",
+      "copied_sha256": "1b37616d36f56a292b779c9736c0ebbbef07140c147a755dbfa570f807632d00",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/asset.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/asset.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "5306e430c6b7cae0f37adf66f327899f60e38cff9430543095e06fb1540201d4",
+      "copied_sha256": "5306e430c6b7cae0f37adf66f327899f60e38cff9430543095e06fb1540201d4",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/base.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/base.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "1c429b65f81160714ce5cf8bf88cb8d37258e6bde6e66670a48fdf48b2650112",
+      "copied_sha256": "1c429b65f81160714ce5cf8bf88cb8d37258e6bde6e66670a48fdf48b2650112",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/compiler.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/compiler.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "852c793c5469a127806ed376622bde2e46f3c27f542302d0abe7860b33b40a9e",
+      "copied_sha256": "852c793c5469a127806ed376622bde2e46f3c27f542302d0abe7860b33b40a9e",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/geometry.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/geometry.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "1897318519925b3d00228ffd88f203d695ef98d8a86334dafc1d219b9f0834e6",
+      "copied_sha256": "1897318519925b3d00228ffd88f203d695ef98d8a86334dafc1d219b9f0834e6",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/light.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/light.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "cb303dbbb40a9f60c1d5be50b0607ec4b07473f0f408675e8563081d9b65411d",
+      "copied_sha256": "cb303dbbb40a9f60c1d5be50b0607ec4b07473f0f408675e8563081d9b65411d",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/mjcf.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/mjcf.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "0bb884d1607dd8e43e40869a001f756b2b388b943fd3f1e57144a7be0c23aaef",
+      "copied_sha256": "0bb884d1607dd8e43e40869a001f756b2b388b943fd3f1e57144a7be0c23aaef",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/sensor.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/sensor.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "52446c2987dfb39f7b25673721ad334e38470039979dec7d2955415ccdbeb210",
+      "copied_sha256": "52446c2987dfb39f7b25673721ad334e38470039979dec7d2955415ccdbeb210",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/terrain.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/terrain.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "b4b29d654b4d3b5f99a869d28a489b6229954b406cbaa1bf729bd204f551a41c",
+      "copied_sha256": "b4b29d654b4d3b5f99a869d28a489b6229954b406cbaa1bf729bd204f551a41c",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/urdf.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/urdf.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "a998d885b1f7749092011d9d7bafc1f66705cf2b3a45d5456511e4c426047baf",
+      "copied_sha256": "a998d885b1f7749092011d9d7bafc1f66705cf2b3a45d5456511e4c426047baf",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/scene/validation.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/scene/validation.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "7fd4134b4dab67123a3cf32b092b132b8241e7867a3cd6010520ffdb46631260",
+      "copied_sha256": "7fd4134b4dab67123a3cf32b092b132b8241e7867a3cd6010520ffdb46631260",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/sim.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/sim.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "2ad0ae257d7391df9485da2902b523c5eed826da2b7192f71b2d10dac7f00b85",
+      "copied_sha256": "2ad0ae257d7391df9485da2902b523c5eed826da2b7192f71b2d10dac7f00b85",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/config/sim_reset.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/config/sim_reset.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "0c118ad8528ca4a5014a6fc5ddf0cf605689c6db5c52e454942fb9c5c523af0d",
+      "copied_sha256": "0c118ad8528ca4a5014a6fc5ddf0cf605689c6db5c52e454942fb9c5c523af0d",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/direct/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/direct/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "96d37c175347057cd182a59107ba636a7e04903ff4c08858f343162807dd8414",
+      "copied_sha256": "96d37c175347057cd182a59107ba636a7e04903ff4c08858f343162807dd8414",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/direct/env.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/direct/env.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "4c3e66010a12331f704ab3a62586a9a60e3f0be514eb22d5e28b5518b3f8ce55",
+      "copied_sha256": "4c3e66010a12331f704ab3a62586a9a60e3f0be514eb22d5e28b5518b3f8ce55",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/direct/reward.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/direct/reward.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "3c6ae1d138929e85ac1e7bc817b40b954f6d0f61011c75229b247313ef0f23c4",
+      "copied_sha256": "3c6ae1d138929e85ac1e7bc817b40b954f6d0f61011c75229b247313ef0f23c4",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/input/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/input/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "79fbb24d2ef10c15680f6791e8108787a8551f3e75f38c5ae68892a2b4b4c25d",
+      "copied_sha256": "79fbb24d2ef10c15680f6791e8108787a8551f3e75f38c5ae68892a2b4b4c25d",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/input/bindings.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/input/bindings.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "05dab5dad9502799be38bcc7b98ca254abc62073eb8fdbc7e4333e9079096770",
+      "copied_sha256": "05dab5dad9502799be38bcc7b98ca254abc62073eb8fdbc7e4333e9079096770",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/input/command.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/input/command.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "1d8cc7579a1d39e51575b397a5fd2b38024bd4fe0c15a4d159c90b0e77584a80",
+      "copied_sha256": "1d8cc7579a1d39e51575b397a5fd2b38024bd4fe0c15a4d159c90b0e77584a80",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/input/device.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/input/device.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "b18da4816244030d550cce0765c533a4685e9157511c304f0030d10a08e6c395",
+      "copied_sha256": "b18da4816244030d550cce0765c533a4685e9157511c304f0030d10a08e6c395",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/manager/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/manager/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "a75ca9f996ca57a61701aafce6910a679967689953dba469b2fa73d4d2e594bd",
+      "copied_sha256": "a75ca9f996ca57a61701aafce6910a679967689953dba469b2fa73d4d2e594bd",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/manager/math/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/manager/math/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "73ba96ed263a668eae037a272de43f24cd4b0438b78fee9a980a5f6098131ac7",
+      "copied_sha256": "73ba96ed263a668eae037a272de43f24cd4b0438b78fee9a980a5f6098131ac7",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/manager/math/quaternion.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/manager/math/quaternion.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "8abd9ff7b7defff3870ee23b4f9a32c5aa10957745d27453385effd7ff8a190b",
+      "copied_sha256": "8abd9ff7b7defff3870ee23b4f9a32c5aa10957745d27453385effd7ff8a190b",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/math/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/math/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "77a29f5c7ced2a94bdb4eba0216e11405b68a8f32f81c87bfaeb958bb28f7e98",
+      "copied_sha256": "77a29f5c7ced2a94bdb4eba0216e11405b68a8f32f81c87bfaeb958bb28f7e98",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/math/quaternion.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/math/quaternion.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "f4fd09a3e4b3e43d6dc5ee759f4ebfd19f867b4cfb1e51571c811955f9412ae5",
+      "copied_sha256": "f4fd09a3e4b3e43d6dc5ee759f4ebfd19f867b4cfb1e51571c811955f9412ae5",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/math/utils.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/math/utils.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "708392db9a1077f6741dbcff6defe490ea63255932f13ac2ecb7c3d12b139db6",
+      "copied_sha256": "708392db9a1077f6741dbcff6defe490ea63255932f13ac2ecb7c3d12b139db6",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/mdp/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/mdp/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "f35093b651b4d9d59aab101e8d0cbb85664c242c26b565b582f2ada140a5e8f9",
+      "copied_sha256": "f35093b651b4d9d59aab101e8d0cbb85664c242c26b565b582f2ada140a5e8f9",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/mdp/noise.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/mdp/noise.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "60184e464ee06d4a58f9d3d79d2a680fd7bfebff32f0636e93b2ce3caa00ca13",
+      "copied_sha256": "60184e464ee06d4a58f9d3d79d2a680fd7bfebff32f0636e93b2ce3caa00ca13",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/mdp/observations.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/mdp/observations.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "ff5573b7d2deb43777b52158dad446d774e4d9f682757d1278c84ae12ffb9bc6",
+      "copied_sha256": "ff5573b7d2deb43777b52158dad446d774e4d9f682757d1278c84ae12ffb9bc6",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/mdp/rewards.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/mdp/rewards.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "d001b6523a52ad9054cb21c45ea05162e6d2910db2993663d70cb1ee6a4c1dfd",
+      "copied_sha256": "d001b6523a52ad9054cb21c45ea05162e6d2910db2993663d70cb1ee6a4c1dfd",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/mdp/state.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/mdp/state.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "3accb2f3bd34353e4e98566bad4a59b523e8025c67cb694c92d346cfa1c867f0",
+      "copied_sha256": "3accb2f3bd34353e4e98566bad4a59b523e8025c67cb694c92d346cfa1c867f0",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/mdp/terminations.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/mdp/terminations.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "5f815e12eaaca5a75e17ca407794c2e995610072e9b08345714ee676ece684f1",
+      "copied_sha256": "5f815e12eaaca5a75e17ca407794c2e995610072e9b08345714ee676ece684f1",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/mdp/terrain.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/mdp/terrain.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "a5a87f45c39d68c7770767da4db1a36d5270f813a8a3300a8dcccfe412343112",
+      "copied_sha256": "a5a87f45c39d68c7770767da4db1a36d5270f813a8a3300a8dcccfe412343112",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "30475719288b3e51da7b80ba261b212e4867d86fb9e1c96d66a78f2edba7437c",
+      "copied_sha256": "30475719288b3e51da7b80ba261b212e4867d86fb9e1c96d66a78f2edba7437c",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/kernel.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "77c84816767384bb83e843eda749182b9964e8e5172c464d0dcf425198777562",
+      "copied_sha256": "77c84816767384bb83e843eda749182b9964e8e5172c464d0dcf425198777562",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/kernel_data/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "db39577b688ddac7754db43d55841aa0031625772106f4ad6720f016bf1b2fa6",
+      "copied_sha256": "db39577b688ddac7754db43d55841aa0031625772106f4ad6720f016bf1b2fa6",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/canonical.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/kernel_data/canonical.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "e7dcefbafde26d2353e5b6bca4fbb40b6d9ea0a9f18fc24faccc2b3363b8a1e4",
+      "copied_sha256": "e7dcefbafde26d2353e5b6bca4fbb40b6d9ea0a9f18fc24faccc2b3363b8a1e4",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/lowering.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/kernel_data/lowering.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "18ebd5bc44d6ff91cd705523f6251567043041651647b519176cfa258f7c03f1",
+      "copied_sha256": "18ebd5bc44d6ff91cd705523f6251567043041651647b519176cfa258f7c03f1",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/map.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/kernel_data/map.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "fce907a3e6ed4d57f138f3956551b01e21ca7b83326562b5e00b6ce186d380fd",
+      "copied_sha256": "fce907a3e6ed4d57f138f3956551b01e21ca7b83326562b5e00b6ce186d380fd",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/kernel_data/tree.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/kernel_data/tree.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "ac3e050269718b2fdae6165e813c77e9952290fe3b2d695d149afa823fe3c9f0",
+      "copied_sha256": "ac3e050269718b2fdae6165e813c77e9952290fe3b2d695d149afa823fe3c9f0",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "5fffc1e1fe7c8e1333ed57b3c027d48f7b08d20f4000b9194bc6f1cda750b464",
+      "copied_sha256": "5fffc1e1fe7c8e1333ed57b3c027d48f7b08d20f4000b9194bc6f1cda750b464",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/actions.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/actions.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "2843e2a57817acb967c1df45fe49788eef0a7e273287927ddb9efff28f1e2197",
+      "copied_sha256": "2843e2a57817acb967c1df45fe49788eef0a7e273287927ddb9efff28f1e2197",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/commands.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/commands.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "c11cd4ea6830e2f4d33d05b3113bd8f5c525e4105b15f13e50f2e71e739405ff",
+      "copied_sha256": "c11cd4ea6830e2f4d33d05b3113bd8f5c525e4105b15f13e50f2e71e739405ff",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/compiler/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "d1fe8e71f2b86d1e6b57afac598a1018519b9a38b5b8deafc470d1e83e1b8f48",
+      "copied_sha256": "d1fe8e71f2b86d1e6b57afac598a1018519b9a38b5b8deafc470d1e83e1b8f48",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/cache.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/compiler/cache.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "6e359455a798bcfb022c9e028b6e72072ba80e5d816fb2123e18817aa24e2fe0",
+      "copied_sha256": "6e359455a798bcfb022c9e028b6e72072ba80e5d816fb2123e18817aa24e2fe0",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/codegen.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/compiler/codegen.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "bb614b4d439741e46c7bdea395b449676485d9bff293f3dfc6b7bdba52535ef9",
+      "copied_sha256": "bb614b4d439741e46c7bdea395b449676485d9bff293f3dfc6b7bdba52535ef9",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/compiler.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/compiler/compiler.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "10061bfcac105f9c6e79c5afc37ce10a57156605daa7652dfddb13a8c32c4512",
+      "copied_sha256": "10061bfcac105f9c6e79c5afc37ce10a57156605daa7652dfddb13a8c32c4512",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/fingerprint.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/compiler/fingerprint.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "6d5fd100eb4fafa6758b4cb140e0a655a930b92d8d458da1419ac19901a3d3be",
+      "copied_sha256": "6d5fd100eb4fafa6758b4cb140e0a655a930b92d8d458da1419ac19901a3d3be",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/plan.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/compiler/plan.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "779e05d03623c6bbe2bc6642587e187b30cdfae9c80e1ecff4bbe29b779acd8f",
+      "copied_sha256": "779e05d03623c6bbe2bc6642587e187b30cdfae9c80e1ecff4bbe29b779acd8f",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/compiler/program.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/compiler/program.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "6fdf51026226e3b80eea5f3315d03c2c42fb43d95d260bc5dd8a420be256f44d",
+      "copied_sha256": "6fdf51026226e3b80eea5f3315d03c2c42fb43d95d260bc5dd8a420be256f44d",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/context.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/context.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "8087e012e543778a1cd8002375a70c7cce1ae9e2ed1902507e0ea21f9292a37c",
+      "copied_sha256": "8087e012e543778a1cd8002375a70c7cce1ae9e2ed1902507e0ea21f9292a37c",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/dispatch.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/dispatch.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "6fe9f641989decb708def641038f44ea2a18e98c65e47b1b732b3eaac73769f4",
+      "copied_sha256": "6fe9f641989decb708def641038f44ea2a18e98c65e47b1b732b3eaac73769f4",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/env.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/env.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "eb2904bc9dd513cb5433e5db2fa76d0ee41fbb2b539e8df7825b1a0cfd5d5111",
+      "copied_sha256": "eb2904bc9dd513cb5433e5db2fa76d0ee41fbb2b539e8df7825b1a0cfd5d5111",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/metrics.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/metrics.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "4710ec533aa64659e99530f05c7f588087fccd75200d65ba82c60940dd5b5e98",
+      "copied_sha256": "4710ec533aa64659e99530f05c7f588087fccd75200d65ba82c60940dd5b5e98",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/observations.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/observations.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "e611f3dededf5bd79caa2b2e8c014c5139435b2b5fdcb4500f68d5253bcbfaa3",
+      "copied_sha256": "e611f3dededf5bd79caa2b2e8c014c5139435b2b5fdcb4500f68d5253bcbfaa3",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/rand.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/rand.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "2fff5e9b0a8c1b9dcc187967860c11c015e342294328ac35b900fcd3e6272fe2",
+      "copied_sha256": "2fff5e9b0a8c1b9dcc187967860c11c015e342294328ac35b900fcd3e6272fe2",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/rewards.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/rewards.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "902204ed2435661822ba7f50186a2dc4dde428b2280386feeacebf4c491170cf",
+      "copied_sha256": "902204ed2435661822ba7f50186a2dc4dde428b2280386feeacebf4c491170cf",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/sim_reset.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/sim_reset.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "87e1409387b8d7be78ec980ae555498568d18b2f80487260cae0bf9df996d36f",
+      "copied_sha256": "87e1409387b8d7be78ec980ae555498568d18b2f80487260cae0bf9df996d36f",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/terminations.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/terminations.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "3407429cd0057fafa871c90a200597f62cc1e817a895c1000ad824253cabf3af",
+      "copied_sha256": "3407429cd0057fafa871c90a200597f62cc1e817a895c1000ad824253cabf3af",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/manager/terms.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/manager/terms.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "a98150adb6614e6e6fa0c064985143c1d3ba4099529ef401c7cc221b83c3e196",
+      "copied_sha256": "a98150adb6614e6e6fa0c064985143c1d3ba4099529ef401c7cc221b83c3e196",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/math/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/math/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "cb8c5c88cb355f18c18ad152feddaa960b9514b4fa1979d30a5044e2a19bd6fe",
+      "copied_sha256": "cb8c5c88cb355f18c18ad152feddaa960b9514b4fa1979d30a5044e2a19bd6fe",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/math/quaternion.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/math/quaternion.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "aac49ba8a1dc8dc975252dfc1d913932f44aba35f18aa885e62d89594fe94ebe",
+      "copied_sha256": "aac49ba8a1dc8dc975252dfc1d913932f44aba35f18aa885e62d89594fe94ebe",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/program.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/program.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "8ddc21f9a290e41299525f310132b7bc7b855772b30b3b9cceb6d150325b94f0",
+      "copied_sha256": "8ddc21f9a290e41299525f310132b7bc7b855772b30b3b9cceb6d150325b94f0",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/numba/threading.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/numba/threading.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "0f86f08c81e2289a6cdfc71ee0d4efc5b13c22cabf43507dfe25f0f2502e4d85",
+      "copied_sha256": "0f86f08c81e2289a6cdfc71ee0d4efc5b13c22cabf43507dfe25f0f2502e4d85",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/perf.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/perf.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "632f01c55ec030d5e6d89b21d180f09fea31d75c49f1238b8706070c9b5eeaff",
+      "copied_sha256": "632f01c55ec030d5e6d89b21d180f09fea31d75c49f1238b8706070c9b5eeaff",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/registry.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/registry.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "cb7b0a53186ab8a6a63b7345f758b50dd7a04bdbf2a954de37726cc92004e91c",
+      "copied_sha256": "cb7b0a53186ab8a6a63b7345f758b50dd7a04bdbf2a954de37726cc92004e91c",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/renderer.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/renderer.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "979643336bb7836dd515cfe53c3f11b76a1e2666c6a3c42c03ba739634d8afbe",
+      "copied_sha256": "979643336bb7836dd515cfe53c3f11b76a1e2666c6a3c42c03ba739634d8afbe",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/sim/__init__.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/sim/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "cae0aa08c65c02bd9fae06f25d32bc88105f1283c66acb67b29c6bfb2221f532",
+      "copied_sha256": "cae0aa08c65c02bd9fae06f25d32bc88105f1283c66acb67b29c6bfb2221f532",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/sim/backend.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/sim/backend.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "2448c241551e939f87dbafd9f6a9534aaf6a91c1ae82a3b3eb8c9acbe7fe928e",
+      "copied_sha256": "2448c241551e939f87dbafd9f6a9534aaf6a91c1ae82a3b3eb8c9acbe7fe928e",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/sim/body.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/sim/body.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "2e18a817251c27cb01dbddb44de5494d2206451a1f1391d34a51b993158544b8",
+      "copied_sha256": "2e18a817251c27cb01dbddb44de5494d2206451a1f1391d34a51b993158544b8",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/sim/config.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/sim/config.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "ee7ec4ffae094fd57f830be966524ee84e9f46d2138cd27e2856ca6a03a77092",
+      "copied_sha256": "ee7ec4ffae094fd57f830be966524ee84e9f46d2138cd27e2856ca6a03a77092",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/sim/model.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/sim/model.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "5d2f023f28508d660988a401ddf3f4912fbd29986ee943507532d3fd2e497e0e",
+      "copied_sha256": "5d2f023f28508d660988a401ddf3f4912fbd29986ee943507532d3fd2e497e0e",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/sim/read.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/sim/read.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "b34e020e3dac6c5aebe3f115dfa9efcdd8c3eee357cf11a930f74a34d6d3c269",
+      "copied_sha256": "b34e020e3dac6c5aebe3f115dfa9efcdd8c3eee357cf11a930f74a34d6d3c269",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/sim/registry.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/sim/registry.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "398b9da9b440381ef0a708e5a8c1f95fedb3654b566d62ec2020b9b7318cc357",
+      "copied_sha256": "398b9da9b440381ef0a708e5a8c1f95fedb3654b566d62ec2020b9b7318cc357",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/sim/write.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/sim/write.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "f4f1c71ecf3350d159f3d48078faece0a78e8c34d9c5fca3e1e23b4145e4dbd4",
+      "copied_sha256": "f4f1c71ecf3350d159f3d48078faece0a78e8c34d9c5fca3e1e23b4145e4dbd4",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_core/src/motrix_env_core/torch/reward.py",
+      "origin": "MotrixLab/motrix_env_core/src/motrix_env_core/torch/reward.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "f08e5033b0e91613715907aa2e39f956f3de0d7b903339133d866c0928c6507a",
+      "copied_sha256": "f08e5033b0e91613715907aa2e39f956f3de0d7b903339133d866c0928c6507a",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/pyproject.toml",
+      "origin": "MotrixLab/motrix_env_motrixsim/pyproject.toml",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "3b3405e7f0cccc3ce2c06104ee306a2d2f96ea373cd981d237e1fa4beedf5c7e",
+      "copied_sha256": "3b3405e7f0cccc3ce2c06104ee306a2d2f96ea373cd981d237e1fa4beedf5c7e",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/README.md",
+      "origin": "MotrixLab/motrix_env_motrixsim/README.md",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "a26be065ef636fd49cba480130cb83855e8b48aa9f5374f7dc975d584c5fb0a5",
+      "copied_sha256": "a26be065ef636fd49cba480130cb83855e8b48aa9f5374f7dc975d584c5fb0a5",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/__init__.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/__init__.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "b74d00c340304ce0b3d846353313b897b6b7c3b5d16aa7bf2db40fef3cac10ac",
+      "copied_sha256": "b74d00c340304ce0b3d846353313b897b6b7c3b5d16aa7bf2db40fef3cac10ac",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/compiler.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/compiler.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "dee1ffb21477d95a7476db90cc589d1e0aad9e99aab91ad51ed662815744764a",
+      "copied_sha256": "dee1ffb21477d95a7476db90cc589d1e0aad9e99aab91ad51ed662815744764a",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/register.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/register.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "3e7b8aae15f0b84414b5ee53bf6e114935a45115f7e4bb15dffbc1aa24758f72",
+      "copied_sha256": "3e7b8aae15f0b84414b5ee53bf6e114935a45115f7e4bb15dffbc1aa24758f72",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/renderer.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/renderer.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "87f3c3c7d0f35bfc334dfcc80649b2b4e7ca72be256227a0e081eb79e4a38786",
+      "copied_sha256": "87f3c3c7d0f35bfc334dfcc80649b2b4e7ca72be256227a0e081eb79e4a38786",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/runtime.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/runtime.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "afa495e4359a4112ca9e731c1be376fb6dcd106f8b27c2383347444dd823428a",
+      "copied_sha256": "afa495e4359a4112ca9e731c1be376fb6dcd106f8b27c2383347444dd823428a",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/sim_data.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/sim_data.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "db767394f013bf889e9eac3020a41895690c3047fa17ca438256f9d595026dd2",
+      "copied_sha256": "db767394f013bf889e9eac3020a41895690c3047fa17ca438256f9d595026dd2",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/torch_env.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/torch_env.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "30bbef3360aff1c9f9d43ec2fa38b1999692983395cb71ae1b367c7f267817e0",
+      "copied_sha256": "30bbef3360aff1c9f9d43ec2fa38b1999692983395cb71ae1b367c7f267817e0",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/urdf.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/urdf.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "78082a6135929bc7cfa2106f538822c2efaced3161e82789abcf7b6d40b19a78",
+      "copied_sha256": "78082a6135929bc7cfa2106f538822c2efaced3161e82789abcf7b6d40b19a78",
+      "unchanged": true
+    },
+    {
+      "relative": "vendor/motrix_env_motrixsim/src/motrix_env_motrixsim/write_compiler.py",
+      "origin": "MotrixLab/motrix_env_motrixsim/src/motrix_env_motrixsim/write_compiler.py",
+      "origin_commit": "069b1bc4aa4f758786469009e38016518c21af70",
+      "origin_sha256": "7f83794c5cf2e9e7fb52b87f2c62cf534a6cbb5feb883abb9018252fdac3938e",
+      "copied_sha256": "7f83794c5cf2e9e7fb52b87f2c62cf534a6cbb5feb883abb9018252fdac3938e",
+      "unchanged": true
+    }
+  ]
+}

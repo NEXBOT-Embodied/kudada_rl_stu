@@ -1,0 +1,21 @@
+{
+  "version": "2026-10-12-classroom-v1",
+  "role": "Simulation-only classroom starting model",
+  "source": "Historical independent PPO CP550",
+  "hardware_tested": false,
+  "files": {
+    "teaching_start.onnx": {
+      "sha256": "7c59335dc6d579db6f75b499ca078019f5eca8f965b3d1cf7997f6011c1b9bc0",
+      "bytes": 397847
+    },
+    "teaching_start.pt": {
+      "sha256": "e2396d9719f88922804f04f8d533107b0192f5ca84512e93e6994cdbcbc9d272",
+      "bytes": 2436678
+    }
+  },
+  "known_issues": [
+    "Sustained zero-command oscillation",
+    "Large lateral/yaw deviation during walking"
+  ],
+  "demo_is_a_different_model": true
+}

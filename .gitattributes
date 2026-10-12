@@ -1,0 +1,5 @@
+# Preserve source bytes across platforms for the course provenance hashes.
+* -text
+*.onnx binary
+*.pt binary
+*.npz binary
