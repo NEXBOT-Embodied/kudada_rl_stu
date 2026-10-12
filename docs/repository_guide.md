@@ -24,7 +24,7 @@
 | `assets/kudada/`、`references/tinker/` | MJCF、mesh 与已有控制契约 YAML |
 | `provenance/source_manifest.json` | 发布文件清单及 SHA256；不包含安装环境和实验输出 |
 | `runs/`、`reports/` | 本地训练和评估输出，由命令生成，不纳入 Git 提交 |
-| `docs/` | 课前清单、实验手册、本说明和故障排查 |
+| `docs/` | 课前清单、强化学习基础预习、实验手册、本说明和故障排查 |
 
 ## 教学起点与模型结构
 

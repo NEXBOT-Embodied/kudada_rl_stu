@@ -34,8 +34,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7513,
-      "sha256": "0e9fba23f2d815a223fb1d7d71d8fb34e461a81e76f8edf1800b18c747161b8a"
+      "bytes": 7870,
+      "sha256": "a611c0b104aada9c54fa8d1b2c6bf88fdac7f286e5c751f5247fdfcaae187704"
     },
     {
       "path": "assets/kudada/check_kudada_urdf.py",
@@ -159,13 +159,18 @@
     },
     {
       "path": "docs/preclass_preparation.md",
-      "bytes": 5646,
-      "sha256": "651e65a945024d968da075324b682cbf095a0be2ff6c9b5a38a916869f7f6ffc"
+      "bytes": 6570,
+      "sha256": "63e53153f1f263aff48169bbafafc71606f600b1b380bb00a2f55f7fe14a6ab2"
     },
     {
       "path": "docs/repository_guide.md",
-      "bytes": 3430,
-      "sha256": "dedd0c962927a46deb99ab3cc85b874b0d75a42eb3786ebd1a2fb333f592c1a1"
+      "bytes": 3457,
+      "sha256": "8a261d6ba43fdb5e3e9948116eccebe3401cd775560f9e32af2b432456900697"
+    },
+    {
+      "path": "docs/rl_basics.md",
+      "bytes": 8317,
+      "sha256": "a0a6481dd6aeb8e271418ef48aa9060fb5a5ccfba8c588ece595d47acc7cd644"
     },
     {
       "path": "docs/student_lab.md",
@@ -888,8 +893,8 @@
       "sha256": "7f83794c5cf2e9e7fb52b87f2c62cf534a6cbb5feb883abb9018252fdac3938e"
     }
   ],
-  "delivery_file_count": 175,
-  "delivery_total_bytes": 8765844,
+  "delivery_file_count": 176,
+  "delivery_total_bytes": 8775469,
   "origin_records": [
     {
       "relative": "scratch_policy/__init__.py",
