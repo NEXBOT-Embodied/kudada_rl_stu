@@ -14,15 +14,15 @@
 | `requirements.lock.txt` / `requirements.txt` | 固定版本依赖及其兼容入口，共用一份依赖清单 |
 | `models/teaching_start.pt` / `.onnx` | 可训练检查点与对应 ONNX，模型身份见下文及教师发布说明 |
 | `models/manifest.json` | 教学起点的来源、模型哈希和限制 |
-| `configs/` | B/C 同等预算、单变量实验配置 |
+| `configs/baseline.json` | 课堂续训配置：从 A 热启动，20 轮 |
 | `course/train.py` | 课堂 PPO：热启动 Actor/Critic，重新建立 Adam；HIM 架构时冻结其编码器 |
-| `course/evaluate.py` | 5 条件配对评估及每步原始轨迹 |
+| `course/evaluate.py` | 多条件评估及每步原始轨迹，课堂用短评估生成简表 |
+| `course/mujoco_play.py` | MuJoCo 回放、单关节信号记录与部署参数演示 |
 | `course/runtime.py` | 模型加载、固定 `[1,924] → [1,11]` ONNX 导出 |
 | `scratch_policy/` | 独立 Actor、兼容 HIM 演示模型与训练环境继承关系 |
 | `kudada_motrix/`、`tinker_policy/env.py` | 机器人状态、观测和控制解码 |
 | `vendor/` | 固定版本的 Motrix 环境源码，不含整个研发工作区 |
 | `assets/kudada/`、`references/tinker/` | MJCF、mesh 与已有控制契约 YAML |
-| `provenance/source_manifest.json` | 发布文件清单及 SHA256；不包含安装环境和实验输出 |
 | `runs/`、`reports/` | 本地训练和评估输出，由命令生成，不纳入 Git 提交 |
 | `docs/` | 课前清单、强化学习基础预习、实验手册、本说明和故障排查 |
 

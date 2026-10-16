@@ -10,7 +10,6 @@ from __future__ import annotations
 from copy import deepcopy
 import hashlib
 import json
-from pathlib import Path
 from typing import Any
 
 import torch
@@ -35,23 +34,11 @@ ESTIMATE_WIDTH = 19
 CORE_FEATURE_WIDTH = 239
 PRIVILEGED_WIDTH = 13
 ACTOR_FIRST_LAYER_KEY = "network.0.weight"
-SOURCE_FILES = (
-    "scratch_policy/policy_yaw_him_v25.py", "scratch_policy/policy_yaw_phase_v10.py",
-    "scratch_policy/policy.py", "scratch_policy/policy_gyro_v4.py",
-    "scratch_policy/export_fixed_yaw_him_v25.py", "scratch_policy/export_fixed.py",
-    "scratch_policy/ort_runtime.py", "scratch_policy/export.py",
-)
 
 
 def canonical_sha256(value: Any) -> str:
     return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":"),
                                     ensure_ascii=False, allow_nan=False).encode("utf-8")).hexdigest()
-
-
-def source_hashes(root: Path | str | None = None) -> dict[str, str]:
-    root = Path(root) if root is not None else Path(__file__).resolve().parents[1]
-    return {relative: hashlib.sha256((root / relative).read_bytes()).hexdigest()
-            for relative in SOURCE_FILES}
 
 
 def him_feature_config(estimator_seed: int = ESTIMATOR_SEED) -> dict[str, Any]:

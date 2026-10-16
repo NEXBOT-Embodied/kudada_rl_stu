@@ -10,7 +10,6 @@ from __future__ import annotations
 from copy import deepcopy
 import hashlib
 import json
-from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -25,11 +24,6 @@ FEATURE_SCHEMA = "scratch_sensor_gyro_features_v4"
 MIGRATION_SCHEMA = "scratch_owned_gyro_skip_function_migration_v4"
 GAIN_KEY = "gyro_skip.weight"
 GYRO_BUFFER_NAMES = ("gyro_raw_scale", "gyro_fir", "gyro_feature_scale")
-SOURCE_FILES = (
-    "scratch_policy/policy_gyro_v4.py", "scratch_policy/policy.py",
-    "scratch_policy/export_fixed_gyro_v4.py", "scratch_policy/export_fixed.py",
-    "scratch_policy/ort_runtime.py", "scratch_policy/export.py",
-)
 ANATOMICAL_DIRECTIONS = {
     "yaw_common": [1., 0., 0., 0., 0., 1., 0., 0., 0., 0.],
     "roll_common": [0., 1., 0., 0., 0., 0., 1., 0., 0., 0.],
@@ -42,13 +36,6 @@ ANATOMICAL_DIRECTIONS = {
 def canonical_sha256(value: Any) -> str:
     return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":"),
                                     ensure_ascii=False, allow_nan=False).encode("utf-8")).hexdigest()
-
-
-def source_hashes(root: Path | str | None = None) -> dict[str, str]:
-    """Minimum actor/export dependency closure for a pinned training snapshot."""
-    root = Path(root) if root is not None else Path(__file__).resolve().parents[1]
-    return {relative: hashlib.sha256((root / relative).read_bytes()).hexdigest()
-            for relative in SOURCE_FILES}
 
 
 def nominal_dc_filter() -> np.ndarray:

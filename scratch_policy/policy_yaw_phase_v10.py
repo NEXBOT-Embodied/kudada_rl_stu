@@ -10,7 +10,6 @@ from __future__ import annotations
 from copy import deepcopy
 import hashlib
 import json
-from pathlib import Path
 from typing import Any
 
 import torch
@@ -25,22 +24,11 @@ METHOD = "PPO_yaw_command_phase_bypass_v10"
 GAIN_KEY = "yaw_phase.weight"
 MIGRATION_SCHEMA = "scratch_owned_yaw_phase_zero_branch_migration_v10"
 BUFFER_NAMES = ("yaw_command_raw_scale", "gyro_raw_scale", "gyro_fir", "turn_rate_normalizer")
-SOURCE_FILES = (
-    "scratch_policy/policy_yaw_phase_v10.py", "scratch_policy/policy.py",
-    "scratch_policy/policy_gyro_v4.py", "scratch_policy/export_fixed_yaw_phase_v10.py",
-    "scratch_policy/export_fixed.py", "scratch_policy/ort_runtime.py", "scratch_policy/export.py",
-)
 
 
 def canonical_sha256(value: Any) -> str:
     return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":"),
                                     ensure_ascii=False, allow_nan=False).encode("utf-8")).hexdigest()
-
-
-def source_hashes(root: Path | str | None = None) -> dict[str, str]:
-    root = Path(root) if root is not None else Path(__file__).resolve().parents[1]
-    return {relative: hashlib.sha256((root / relative).read_bytes()).hexdigest()
-            for relative in SOURCE_FILES}
 
 
 def yaw_phase_feature_config() -> dict[str, Any]:

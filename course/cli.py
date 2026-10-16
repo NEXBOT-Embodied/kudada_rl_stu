@@ -48,9 +48,6 @@ def main():
     train=commands.add_parser('train')
     train.add_argument('--config',type=Path,required=True)
     train.add_argument('--run-dir',type=Path)
-    compare=commands.add_parser('compare')
-    for key in ('a','b','c'): compare.add_argument('--'+key,type=Path,required=True,help='Path to evaluation.json or evaluation directory')
-    compare.add_argument('--output',type=Path,default=Path('reports/comparison.json'))
     args=parser.parse_args()
     if args.command=='play':
         if args.mode=='pd' and args.policy_kp_scale is not None:
@@ -91,13 +88,6 @@ def main():
         train_main()
     elif args.command=='export':
         print(json.dumps(export(args.checkpoint,args.output,args.observations),ensure_ascii=False,indent=2))
-    elif args.command=='compare':
-        from course.compare import compare_results
-        result=compare_results(args.a,args.b,args.c,args.output)
-        print(f"Saved: {args.output}; {args.output.with_suffix('.md')}")
-        print(f"Comparison scope: {result['comparison_scope']}; matched conditions: {result['matched_conditions']}")
-        for name,issues in result['protocol_validation'].items():
-            if issues: print(f"{name}: "+'; '.join(issues))
     else:
         checkpoint=args.checkpoint
         if checkpoint is None and args.onnx is None and not (args.command=='play' and args.mode=='pd'):

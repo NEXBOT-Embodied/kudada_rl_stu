@@ -8,7 +8,6 @@ import time
 from pathlib import Path
 import numpy as np
 from course.runtime import Policy, sha256, write_json
-from course.source_binding import collect_source_binding
 
 EVALUATION_SEED = 9101
 PROTOCOL = {'stand':(60.,[(0.,60.,0.)]), 'walk':(30.,[(0.,30.,.2)]),
@@ -165,12 +164,8 @@ def evaluate_mode(policy, mode, output, seed=EVALUATION_SEED, conditions=5, seco
     return report
 
 def evaluate(policy, output, modes=('stand','walk','transition'), seed=EVALUATION_SEED, conditions=5, seconds=None):
-    binding=collect_source_binding()
-    if conditions<5:
-        print('SMOKE ONLY: fewer than 5 conditions does not satisfy classroom evaluation.',flush=True)
     results={mode:evaluate_mode(policy,mode,output,seed,conditions,seconds) for mode in modes}
     report=dict(schema='standing_course_eval_v1',policy=policy.identity,protocol_seed=seed,conditions=conditions,
-                modes=results,complete_classroom_protocol=conditions>=5 and seconds is None and set(modes)==set(PROTOCOL),
-                source_binding=binding,binding_capture='in_report')
+                modes=results)
     write_json(Path(output)/'evaluation.json',report)
     return report

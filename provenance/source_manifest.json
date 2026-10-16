@@ -38,11 +38,6 @@
       "sha256": "a611c0b104aada9c54fa8d1b2c6bf88fdac7f286e5c751f5247fdfcaae187704"
     },
     {
-      "path": "assets/kudada/check_kudada_urdf.py",
-      "bytes": 10907,
-      "sha256": "2cc41d8ecddcbc53ee943c894d7500e956c04fd012035d38d1434112032412e2"
-    },
-    {
       "path": "assets/kudada/kudada_lingzu.urdf",
       "bytes": 16642,
       "sha256": "7130fb3f3d26af03aaab435ea3a7a0a6a723668fa0340baff88e0048b797ac59"
@@ -113,44 +108,29 @@
       "sha256": "99a5e0c21804126b2cd409767ec268a5369b3e9649714395c40340c1b81c364b"
     },
     {
-      "path": "configs/improve.json",
-      "bytes": 1887,
-      "sha256": "3f29b68a847e3a29b8936ae24fffec918df4e72c6e6c0406b96ea507855f4429"
-    },
-    {
       "path": "course/__init__.py",
       "bytes": 292,
       "sha256": "155d44fbb63fa555298b17d1661c176475279ebe7a2a288938280afc360fae9a"
     },
     {
       "path": "course/cli.py",
-      "bytes": 5913,
-      "sha256": "a5b5ddfb1b0185ad4f21ce6ea10115cb88f4b931e2269758ec9e74e008a99f94"
-    },
-    {
-      "path": "course/compare.py",
-      "bytes": 9487,
-      "sha256": "8ba9bc0bceda0e3776cb6134e6be333cae59b78f8be276f8ae68e237e7b1333f"
+      "bytes": 6954,
+      "sha256": "9ded716341f2083e0e92024b0aedb286d6389cc074015e691caf8dfa446cd886"
     },
     {
       "path": "course/evaluate.py",
-      "bytes": 10723,
-      "sha256": "76a71ff8c9de137e9b294922b95c0d808b9e4b1d46b55c2a2f4ea7867769a1e5"
+      "bytes": 10345,
+      "sha256": "448054e7f6e679d06a5f550d9f6968277305dd345dce8d68a5ce947d48ca781a"
     },
     {
       "path": "course/mujoco_play.py",
-      "bytes": 7311,
-      "sha256": "a83ba027fed864ef629e222328a93241ab1c07d031f0f1c21f3d257d9060189a"
+      "bytes": 10246,
+      "sha256": "830fb5aa01f19eb9c1472133034c8595a01103b6e88dd85763fc4e7d8c183b8a"
     },
     {
       "path": "course/runtime.py",
       "bytes": 6497,
       "sha256": "85a40b6da28d08175e75e5547026f0a14094d6beeb17d0a65eaab9b50d267011"
-    },
-    {
-      "path": "course/source_binding.py",
-      "bytes": 3959,
-      "sha256": "b3ae662e53c8fe740e50d4cb2933a13b7b4e72474495d3c72dbb4088828e2e71"
     },
     {
       "path": "course/train.py",
@@ -164,8 +144,8 @@
     },
     {
       "path": "docs/repository_guide.md",
-      "bytes": 3457,
-      "sha256": "8a261d6ba43fdb5e3e9948116eccebe3401cd775560f9e32af2b432456900697"
+      "bytes": 3484,
+      "sha256": "4c36651067ba84bbb99fa89e73de9a7ab6972530f0628444a829758e0a459d43"
     },
     {
       "path": "docs/rl_basics.md",
@@ -174,13 +154,13 @@
     },
     {
       "path": "docs/student_lab.md",
-      "bytes": 8361,
-      "sha256": "1ace8832fe142c1a816daa65a16eee0de8ce8c2dc729abd2a3ae1720a9ae2d41"
+      "bytes": 5794,
+      "sha256": "d7e2ce325bf7cd20e98c1ec6ecf3092f0221520f2749f42aaf4dd6891c9ab3ed"
     },
     {
       "path": "docs/troubleshooting.md",
-      "bytes": 3030,
-      "sha256": "65b477ea17f4456b9b5ca8950175bac95e26439a13a4adee92cff9825acde1d8"
+      "bytes": 2796,
+      "sha256": "94353719d151030ac0cf68df5f4fbe3b4507042ed01b3bb2f3dd66de14802b4c"
     },
     {
       "path": "install.ps1",
@@ -221,11 +201,6 @@
       "path": "kudada_motrix/env.py",
       "bytes": 24090,
       "sha256": "cfd8842671e66b42e4c29c18105ca97167e68b73ff0726f2c6bca25b6dd05dd3"
-    },
-    {
-      "path": "kudada_motrix/follow_renderer.py",
-      "bytes": 1028,
-      "sha256": "c5be19197dbb22b7e8b4f96ae2c46467b4956a6f55e303670d81ad2efc9bd86a"
     },
     {
       "path": "kudada_motrix/randomization.py",
@@ -333,54 +308,29 @@
       "sha256": "997dcec5949913e5ba202cf894c504bacc4fda8d7569a901f9cba79de5795413"
     },
     {
-      "path": "scratch_policy/export_fixed.py",
-      "bytes": 8893,
-      "sha256": "04ea190cd57ad8f7456adfc261466a05b669d258eb73cc288f27b54f97b29bdc"
-    },
-    {
-      "path": "scratch_policy/export_fixed_yaw_him_v25.py",
-      "bytes": 6831,
-      "sha256": "979405e15c65d26830b37b20b747634fa51f15201e4cf17365700a877be794e1"
-    },
-    {
-      "path": "scratch_policy/ort_runtime.py",
-      "bytes": 2205,
-      "sha256": "2923c30550fb5aa58451cd06af907b04ee8fb50f26fe84df807abc25a73e81d3"
-    },
-    {
       "path": "scratch_policy/policy.py",
       "bytes": 6444,
       "sha256": "6235f4d763758f445a2b0f767aeacb6a27ab111196db9adff712c7e2ea80fb42"
     },
     {
       "path": "scratch_policy/policy_gyro_v4.py",
-      "bytes": 10332,
-      "sha256": "ce672e7c0a28cff5649adbe7a76857d275f997cae7be991a11e1b47e5650b8d1"
+      "bytes": 9716,
+      "sha256": "06912bd2a32594fae6e2cf903f43cf0a7d91c32bf24f6a0c738e35529659ec9d"
     },
     {
       "path": "scratch_policy/policy_yaw_him_v25.py",
-      "bytes": 17328,
-      "sha256": "c1dee7c507ec8f15de0815e3556fb33167fe0879cb9a4f8bbb0914dbe1eca37f"
+      "bytes": 16704,
+      "sha256": "da697d15519b8dd28eceb72acca0ca7c554df61ac60347d1258c8feb91da0c6d"
     },
     {
       "path": "scratch_policy/policy_yaw_phase_v10.py",
-      "bytes": 9205,
-      "sha256": "a80127aa9deaa7203e88cb3fa268476f0b43f9e216682e89749f465a194616ea"
-    },
-    {
-      "path": "scratch_policy/row_adam_v11.py",
-      "bytes": 7329,
-      "sha256": "3315508e40921dffc8ac1fab4a957a3a4ca828a2729a347779b32054c4000ee4"
+      "bytes": 8623,
+      "sha256": "362eb1a79cfbab0fedd827ee0acd69a5f1a57f8d350dd756019f72e5e9a73487"
     },
     {
       "path": "scratch_policy/straight_env_v2.py",
       "bytes": 9381,
       "sha256": "78c4535625ca792af0b81288aab2b70f6b202f2b334ecc533bcf83e077a26535"
-    },
-    {
-      "path": "scratch_policy/symmetry.py",
-      "bytes": 2680,
-      "sha256": "312543db306319690cc2e6fd8f736b368c72850afc5bc5ba1a75fa12dcbb5914"
     },
     {
       "path": "scratch_policy/yaw_course_env_v7.py",
@@ -893,8 +843,8 @@
       "sha256": "7f83794c5cf2e9e7fb52b87f2c62cf534a6cbb5feb883abb9018252fdac3938e"
     }
   ],
-  "delivery_file_count": 176,
-  "delivery_total_bytes": 8775469,
+  "delivery_file_count": 166,
+  "delivery_total_bytes": 8719265,
   "origin_records": [
     {
       "relative": "scratch_policy/__init__.py",
@@ -915,27 +865,6 @@
       "origin": "kudada_rl_motrix\\scratch_policy\\export.py",
       "origin_sha256": "997dcec5949913e5ba202cf894c504bacc4fda8d7569a901f9cba79de5795413",
       "copied_sha256": "997dcec5949913e5ba202cf894c504bacc4fda8d7569a901f9cba79de5795413",
-      "unchanged": true
-    },
-    {
-      "relative": "scratch_policy/export_fixed.py",
-      "origin": "kudada_rl_motrix\\scratch_policy\\export_fixed.py",
-      "origin_sha256": "04ea190cd57ad8f7456adfc261466a05b669d258eb73cc288f27b54f97b29bdc",
-      "copied_sha256": "04ea190cd57ad8f7456adfc261466a05b669d258eb73cc288f27b54f97b29bdc",
-      "unchanged": true
-    },
-    {
-      "relative": "scratch_policy/export_fixed_yaw_him_v25.py",
-      "origin": "kudada_rl_motrix\\scratch_policy\\export_fixed_yaw_him_v25.py",
-      "origin_sha256": "979405e15c65d26830b37b20b747634fa51f15201e4cf17365700a877be794e1",
-      "copied_sha256": "979405e15c65d26830b37b20b747634fa51f15201e4cf17365700a877be794e1",
-      "unchanged": true
-    },
-    {
-      "relative": "scratch_policy/ort_runtime.py",
-      "origin": "kudada_rl_motrix\\scratch_policy\\ort_runtime.py",
-      "origin_sha256": "2923c30550fb5aa58451cd06af907b04ee8fb50f26fe84df807abc25a73e81d3",
-      "copied_sha256": "2923c30550fb5aa58451cd06af907b04ee8fb50f26fe84df807abc25a73e81d3",
       "unchanged": true
     },
     {
@@ -967,24 +896,10 @@
       "unchanged": true
     },
     {
-      "relative": "scratch_policy/row_adam_v11.py",
-      "origin": "kudada_rl_motrix\\scratch_policy\\row_adam_v11.py",
-      "origin_sha256": "3315508e40921dffc8ac1fab4a957a3a4ca828a2729a347779b32054c4000ee4",
-      "copied_sha256": "3315508e40921dffc8ac1fab4a957a3a4ca828a2729a347779b32054c4000ee4",
-      "unchanged": true
-    },
-    {
       "relative": "scratch_policy/straight_env_v2.py",
       "origin": "kudada_rl_motrix\\scratch_policy\\straight_env_v2.py",
       "origin_sha256": "78c4535625ca792af0b81288aab2b70f6b202f2b334ecc533bcf83e077a26535",
       "copied_sha256": "78c4535625ca792af0b81288aab2b70f6b202f2b334ecc533bcf83e077a26535",
-      "unchanged": true
-    },
-    {
-      "relative": "scratch_policy/symmetry.py",
-      "origin": "kudada_rl_motrix\\scratch_policy\\symmetry.py",
-      "origin_sha256": "312543db306319690cc2e6fd8f736b368c72850afc5bc5ba1a75fa12dcbb5914",
-      "copied_sha256": "312543db306319690cc2e6fd8f736b368c72850afc5bc5ba1a75fa12dcbb5914",
       "unchanged": true
     },
     {
@@ -1058,13 +973,6 @@
       "unchanged": true
     },
     {
-      "relative": "kudada_motrix/follow_renderer.py",
-      "origin": "kudada_rl_motrix\\kudada_motrix\\follow_renderer.py",
-      "origin_sha256": "c5be19197dbb22b7e8b4f96ae2c46467b4956a6f55e303670d81ad2efc9bd86a",
-      "copied_sha256": "c5be19197dbb22b7e8b4f96ae2c46467b4956a6f55e303670d81ad2efc9bd86a",
-      "unchanged": true
-    },
-    {
       "relative": "kudada_motrix/randomization.py",
       "origin": "kudada_rl_motrix\\kudada_motrix\\randomization.py",
       "origin_sha256": "8f4ea3dd697063caff4b7f7dbac63e394f0120acbdd0d6e87b58ed2dc71aa7da",
@@ -1083,13 +991,6 @@
       "origin": "kudada_rl_motrix\\kudada_motrix\\terrain.py",
       "origin_sha256": "fb76fd3dec7e8367a6c6047e124d2375176f111c3aca49d8aab44d8d87d1c5b6",
       "copied_sha256": "fb76fd3dec7e8367a6c6047e124d2375176f111c3aca49d8aab44d8d87d1c5b6",
-      "unchanged": true
-    },
-    {
-      "relative": "assets/kudada/check_kudada_urdf.py",
-      "origin": "kudada_rl_motrix\\assets\\kudada\\check_kudada_urdf.py",
-      "origin_sha256": "2cc41d8ecddcbc53ee943c894d7500e956c04fd012035d38d1434112032412e2",
-      "copied_sha256": "2cc41d8ecddcbc53ee943c894d7500e956c04fd012035d38d1434112032412e2",
       "unchanged": true
     },
     {

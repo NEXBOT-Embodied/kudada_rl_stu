@@ -143,7 +143,7 @@ Linux 对应 `bash install.sh '' https://pypi.tuna.tsinghua.edu.cn/simple https:
 |---|---|
 | [课前准备清单](docs/preclass_preparation.md) | 自查与带到课堂的材料 |
 | [强化学习基础预习](docs/rl_basics.md) | 交互过程、回报、探索、回合、训练与评估，以及知识自测 |
-| [学生实验手册](docs/student_lab.md) | 课程目标、A/B/C 实验、完整评估、ONNX 导出与交付 |
+| [学生实验手册](docs/student_lab.md) | 课程目标、观察 A、续训、回放对比、ONNX 导出与部署参数 |
 | [仓库与模型说明](docs/repository_guide.md) | 文件用途、模型身份、控制接口和验证范围 |
 | [故障排查](docs/troubleshooting.md) | 安装、GUI、训练和评估问题 |
 | [来源与许可](NOTICE.md) | 代码、资产与模型的来源说明 |
