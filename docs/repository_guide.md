@@ -13,6 +13,7 @@
 | `scripts/environment.py` | 两个平台共用的环境校验、依赖安装与 doctor 流程 |
 | `requirements.lock.txt` / `requirements.txt` | 固定版本依赖及其兼容入口，共用一份依赖清单 |
 | `models/teaching_start.pt` / `.onnx` | 可训练检查点与对应 ONNX，模型身份见下文及教师发布说明 |
+| `models/baseline_B.pt` / `.onnx` | 教师预训 B：同一课堂配置从 A 续训 20 轮；本组训练失败时用于回放、sim2sim 与上机 |
 | `models/manifest.json` | 教学起点的来源、模型哈希和限制 |
 | `configs/baseline.json` | 课堂续训配置：从 A 热启动，20 轮 |
 | `course/train.py` | 课堂 PPO：热启动 Actor/Critic，重新建立 Adam；HIM 架构时冻结其编码器 |

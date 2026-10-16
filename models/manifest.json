@@ -17,5 +17,19 @@
     "Sustained zero-command oscillation",
     "Large lateral/yaw deviation during walking"
   ],
-  "demo_is_a_different_model": true
+  "demo_is_a_different_model": true,
+  "fallback": {
+    "role": "Teacher pre-trained B: continued from A with configs/baseline.json (seed 4201, 20 updates). Use it when your own training fails or is too slow.",
+    "hardware_tested": false,
+    "files": {
+      "baseline_B.onnx": {
+        "sha256": "329e1181ba5a70bf2e112a2afe524e41689e3bf39f8d99ba6991b671e5637ac1",
+        "bytes": 397847
+      },
+      "baseline_B.pt": {
+        "sha256": "8307fa4be48c3779bbe2a7429892fa6d1834c99767889e7a4e607553ddae2ea9",
+        "bytes": 2423429
+      }
+    }
+  }
 }

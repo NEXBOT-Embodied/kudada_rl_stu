@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "path": "C:\\NEXBOT\\Project\\2026Roscon\\kudada_rl_teacher_repo\\models\\baseline_B.pt",
+  "sha256": "8307fa4be48c3779bbe2a7429892fa6d1834c99767889e7a4e607553ddae2ea9",
+  "kind": "checkpoint",
+  "actor_sha256": "53b10ef8f204f0612193f3bc970b8d3cb3a02670afb8cb5faa1cdc4f6ff99d6a",
+  "architecture": "scratch_base_mlp",
+  "completed_updates": 20,
+  "onnx": "C:\\NEXBOT\\Project\\2026Roscon\\kudada_rl_teacher_repo\\models\\baseline_B.onnx",
+  "onnx_sha256": "329e1181ba5a70bf2e112a2afe524e41689e3bf39f8d99ba6991b671e5637ac1",
+  "input_shape": [
+    1,
+    924
+  ],
+  "output_shape": [
+    1,
+    11
+  ],
+  "dtype": "float32",
+  "history_frames": 21,
+  "frame_width": 44,
+  "history_order": "oldest_first_newest_last",
+  "startup_history": "zero_fill_then_append_one_frame",
+  "reserved_output_zero": true,
+  "parity_cases": 284,
+  "max_abs_error": 7.748603820800781e-07,
+  "onnxruntime_version": "1.21.0",
+  "opset": 17,
+  "ir_version": 8,
+  "hardware_tested": false,
+  "scope": "Interface and numerical parity. Physical performance requires separate evaluation."
+}

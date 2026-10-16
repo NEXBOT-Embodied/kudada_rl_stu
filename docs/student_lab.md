@@ -26,6 +26,12 @@
 
 两次默认都记录关节 0（左髋偏航）。终端 `joint_signals` 的 `action_span`、`target_span_rad`、`position_span_rad` 分别给出动作、目标角与实际角的变化范围；CSV 每行记录同一控制时刻的动作、目标角、实际角、角速度和力矩。先检验预测，再引用一行读数解释目标与反馈的关系。PD 诊断增益为 KP×4，这两次短运行用于理解控制路径。
 
+## 玩具任务：改奖励，看行为
+
+下午 14:30 在课件里完成，不需要运行本仓库命令。上午的滑台从 −0.6 m 出发要停在 0 m；你可以调四个奖励项（到达奖励、距离惩罚、用力惩罚、每步奖励），先写预测，再点训练，浏览器里约 1 秒训完并自动回放。
+
+每次尝试：选奖励 → 写预测 → 训练 → 看完回放 → 用一句话解释“奖励鼓励了什么，所以它学成了这样”。一次只改一项。至少完成一次，有时间再试第二次，结束时点“导出实验记录”。
+
 ## 2. 从 A 续训本组模型
 
 先预测：让 A 按原配置再练一会儿，站立晃动和行走走偏会怎样？写下预测再训练。
@@ -37,6 +43,8 @@
 把 `G01` 换成本组组号。训练 20 轮，CPU 上约 6–7 分钟；终端每轮打印一行，`reward` 是平均奖励，`failures` 是本轮倒地次数。结束后 `runs/G01/latest.pt` 是本组模型。重复训练时换一个新的运行目录。
 
 课堂训练从 A 热启动，Actor/Critic 权重来自 A。奖励升高说明策略更符合奖励的要求，不能直接说明机器人表现更好，还要看回放。
+
+训练报错或太慢时，改用教师预训的 B：它用同一份课堂配置从 A 续训 20 轮得到，文件已在 `models/` 里（`baseline_B.pt`、`baseline_B.onnx`，哈希见 `models/manifest.json` 的 `fallback`）。下面各节把 `runs/G01/latest.pt` 换成 `models/baseline_B.pt` 即可；导出这一步可以跳过，直接用 `models/baseline_B.onnx` 做 sim2sim，展示时说明用的是 B。
 
 ## 3. 回放对比
 
@@ -70,11 +78,11 @@
 
 ## 5. 部署参数怎样影响行为
 
-同一个模型，部署时的 PD 增益、动作缩放和动作低通不同，行为也会不同。下面的参数只用于课堂仿真演示，训练和评估不使用；每次只改一项：
+同一个模型，部署时的 PD 增益、动作缩放和动作低通不同，行为也会不同。下面的参数只用于课堂仿真演示，训练和评估不使用；每次只改一项，先站立、再行走各看一次：
 
 ```powershell
 .\run.ps1 play stand --checkpoint models/teaching_start.pt --seconds 15 --policy-kp-scale 0.5
-.\run.ps1 play stand --checkpoint models/teaching_start.pt --seconds 15 --action-filter-rate 10
+.\run.ps1 play walk --checkpoint models/teaching_start.pt --seconds 15 --action-filter-rate 10
 ```
 
 `--policy-kp-scale` 调整策略模式的 KP，`--kd-scale` 调整 KD；PD 模式仍用 `--kp-scale` 调整 KP。`--action-scale` 替换动作缩放（真机默认 0.25），`--action-filter-rate` 替换动作低通速率（单位 1/s）。结果中的 `deployment_overrides` 记录传入值和实际参数，`teaching_demo_only=true` 表示这是仿真演示，不代表真机配置。
@@ -92,6 +100,7 @@ GUI 或命令报错时参考 [故障排查](troubleshooting.md)。
 |字段|填写内容|
 |---|---|
 |A 的现象|站立与行走各一句|
+|玩具任务|改了哪一项、预测、实际行为、一句解释|
 |续训前的预测|晃动、走偏会怎样|
 |续训结果|运行目录、训练轮数、最后一轮 reward 与 failures|
 |回放对比|什么变了、什么没变，附简表数字|
