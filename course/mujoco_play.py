@@ -7,13 +7,16 @@ import csv
 import numpy as np
 from course.evaluate import summary
 
-def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None,signals=None,signal_joint=0):
+def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None,signals=None,signal_joint=0,*,
+         policy_kp_scale=None,kd_scale=None,action_scale=None,action_filter_rate=None):
     import mujoco
     from kudada_motrix.constants import MODEL,JOINT_NAMES,FEET
     from tinker_policy.env import hardware_contract
     if not 0 <= signal_joint < len(JOINT_NAMES):
         raise ValueError(f'signal_joint must be between 0 and {len(JOINT_NAMES)-1}')
     contract=hardware_contract()
+    if action_scale is not None: contract['action_scale']=action_scale
+    if action_filter_rate is not None: contract['action_filter_rate']=action_filter_rate
     model=mujoco.MjModel.from_xml_path(str(MODEL))
     model.opt.timestep=.001
     model.vis.global_.offwidth=768
@@ -32,8 +35,16 @@ def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None,signals=N
     data.qpos[qids]=default
     mujoco.mj_forward(model,data)
     initial=data.xpos[base].copy()
-    kp=np.asarray(contract['kp'])*(kp_scale if mode=='pd' else 1.)
+    kp=np.asarray(contract['kp'])*(kp_scale if mode=='pd' else (policy_kp_scale if policy_kp_scale is not None else 1.))
     kd=np.asarray(contract['kd'])
+    if kd_scale is not None: kd=kd*kd_scale
+    deployment_fields=dict(deployment_overrides=dict(
+        policy_kp_scale=policy_kp_scale,kd_scale=kd_scale,
+        action_scale=action_scale,action_filter_rate=action_filter_rate,
+        effective=dict(kp=kp.tolist(),kd=kd.tolist(),action_scale=contract['action_scale'],
+                       action_filter_rate=contract['action_filter_rate'])))
+    if any(value is not None for value in (policy_kp_scale,kd_scale,action_scale,action_filter_rate)):
+        deployment_fields['teaching_demo_only']=True
     gains=np.asarray(contract['action_gains'])
     torque_limits=np.asarray(contract['torque_limits'])
     ranges=np.asarray(contract['target_ranges'])
@@ -144,8 +155,10 @@ def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None,signals=N
                 renderer.update_scene(data,camera=camera)
                 writer.append_data(renderer.render())
             if reason: break
-    if not rows: return {'stop_reason':reason,'survived':False}
+    if not rows: return {'stop_reason':reason,'survived':False,**deployment_fields}
     result=summary(rows,initial,0.,'stand' if mode=='pd' else mode,seconds,'nominal_mujoco',reason)
+    # Early termination can leave a NumPy boolean in the summary's completion gate.
+    result['reference_gates']['completed']=bool(result['reference_gates']['completed'])
     result.update(engine='MuJoCo',policy=None if policy is None else policy.identity,
                   diagnostic_kp_scale=kp_scale if mode=='pd' else None,hardware_tested=False,
                   validation_scope='Visual replay; classroom paired evaluation uses MotrixLab.')
@@ -167,4 +180,5 @@ def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None,signals=N
             diagnostic_kp_scale=result['diagnostic_kp_scale'],requested_seconds=seconds,
             stop_reason=result.get('stop_reason'),headless=headless,signals=result['joint_signals']))
     if video: result.update(video=str(video),video_fps=25)
+    result.update(deployment_fields)
     return result

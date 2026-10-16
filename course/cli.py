@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse
 import json
+import math
 import os
 from pathlib import Path
 import sys
@@ -27,6 +28,10 @@ def main():
     play.add_argument('--headless',action='store_true')
     play.add_argument('--video',type=Path,help='Write actual simulation replay to MP4 at 25 fps')
     play.add_argument('--kp-scale',type=float,default=4.)
+    play.add_argument('--policy-kp-scale',type=float,default=None,help='策略模式的 KP 倍率，范围 [0.25, 4]；仅用于仿真教学')
+    play.add_argument('--kd-scale',type=float,default=None,help='所有模式的 KD 倍率，范围 [0.25, 4]；仅用于仿真教学')
+    play.add_argument('--action-scale',type=float,default=None,help='动作缩放绝对值，范围 (0, 0.5]；仅用于仿真教学')
+    play.add_argument('--action-filter-rate',type=float,default=None,help='动作低通速率绝对值，范围 [5, 200]，单位 1/s；仅用于仿真教学')
     play.add_argument('--signals',type=Path,help='Save aligned action/target/position samples for one joint to CSV and an identity JSON')
     play.add_argument('--signal-joint',type=int,default=0,help='Joint index for the signal record (0-9, default 0)')
     ev=commands.add_parser('evaluate')
@@ -47,6 +52,18 @@ def main():
     for key in ('a','b','c'): compare.add_argument('--'+key,type=Path,required=True,help='Path to evaluation.json or evaluation directory')
     compare.add_argument('--output',type=Path,default=Path('reports/comparison.json'))
     args=parser.parse_args()
+    if args.command=='play':
+        if args.mode=='pd' and args.policy_kp_scale is not None:
+            parser.error('--policy-kp-scale 仅用于策略模式（stand/walk/transition），不能用于 pd 模式')
+        for name,lower,upper,bounds in (
+            ('policy_kp_scale',.25,4.,'[0.25, 4]'),
+            ('kd_scale',.25,4.,'[0.25, 4]'),
+            ('action_scale',0.,.5,'(0, 0.5]'),
+            ('action_filter_rate',5.,200.,'[5, 200]'),
+        ):
+            value=getattr(args,name)
+            if value is not None and (not math.isfinite(value) or value<=0. or not lower<=value<=upper):
+                parser.error(f"--{name.replace('_','-')} 必须是有限且大于 0 的数，范围为 {bounds}")
     from course.runtime import Policy,export,write_json
     if args.command=='doctor':
         import importlib
@@ -91,7 +108,9 @@ def main():
             from course.mujoco_play import play
             duration=args.seconds or (40. if args.mode=='transition' else 30. if args.mode=='walk' else 60.)
             if args.mode=='transition' and duration!=40.: parser.error('Transition replay duration is exactly 40 seconds')
-            result=play(policy,args.mode,duration,args.headless,args.kp_scale,args.video,args.signals,args.signal_joint)
+            result=play(policy,args.mode,duration,args.headless,args.kp_scale,args.video,args.signals,args.signal_joint,
+                        policy_kp_scale=args.policy_kp_scale,kd_scale=args.kd_scale,
+                        action_scale=args.action_scale,action_filter_rate=args.action_filter_rate)
             if args.video:
                 from course.runtime import sha256
                 result['video_sha256']=sha256(args.video)

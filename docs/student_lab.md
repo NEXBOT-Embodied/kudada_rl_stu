@@ -112,3 +112,15 @@ GUI 或命令报错时参考 [故障排查](troubleshooting.md)。
 |回归结果|行走速度、横移、偏航、启停表现|
 |导出校验|IO、parity、ONNX 与 PT 哈希|
 |结论|接受、拒绝或需要更多证据，以及理由|
+
+## 附：部署参数演示（教师用）
+
+这些参数只用于课堂 sim2real 仿真演示，训练和评估不使用。
+使用同一个策略，每次只改变一项，观察 PD 增益、动作缩放和动作低通对行为的影响。
+`--policy-kp-scale` 调整策略模式的 KP，`--kd-scale` 调整所有模式的 KD；PD 模式仍用 `--kp-scale` 调整 KP。
+`--action-scale` 替换动作缩放绝对值（真机默认 0.25），`--action-filter-rate` 替换动作低通速率（单位 1/s）。
+结果中的 `deployment_overrides` 记录传入值和实际参数，`teaching_demo_only=true` 表示仿真演示，不代表真机配置。
+
+```powershell
+.\run.ps1 play stand --checkpoint models/teaching_start.pt --seconds 15 --policy-kp-scale 0.5
+```
