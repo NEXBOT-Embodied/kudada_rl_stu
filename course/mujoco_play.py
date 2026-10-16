@@ -3,13 +3,16 @@ from __future__ import annotations
 from contextlib import nullcontext,ExitStack
 from pathlib import Path
 import time
+import csv
 import numpy as np
 from course.evaluate import summary
 
-def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None):
+def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None,signals=None,signal_joint=0):
     import mujoco
     from kudada_motrix.constants import MODEL,JOINT_NAMES,FEET
     from tinker_policy.env import hardware_contract
+    if not 0 <= signal_joint < len(JOINT_NAMES):
+        raise ValueError(f'signal_joint must be between 0 and {len(JOINT_NAMES)-1}')
     contract=hardware_contract()
     model=mujoco.MjModel.from_xml_path(str(MODEL))
     model.opt.timestep=.001
@@ -43,6 +46,7 @@ def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None):
     phase=0.
     velocity_timer=0.
     rows=[]
+    signal_rows=[]
     reason=None
     if not headless:
         import mujoco.viewer
@@ -91,7 +95,7 @@ def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None):
             action=np.clip(output[:10],-20.,20.)
             protected=outside=False
             maxfeedback=maxcommand=0.
-            for _ in range(20):
+            for substep in range(20):
                 filtered+=contract['action_filter_rate']*.001*(action-filtered)
                 target=np.clip(default+contract['action_scale']*gains*filtered,ranges[:,0],ranges[:,1])
                 rawspeed=np.abs(target-previous_target)*57.3/.001
@@ -99,6 +103,12 @@ def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None):
                 previous_target[:]=target
                 outside|=bool(np.any((target<model.jnt_range[joint_ids,0])|(target>model.jnt_range[joint_ids,1])))
                 data.ctrl[aids]=np.clip(kp*(target-data.qpos[qids])-kd*data.qvel[vids],-torque_limits,torque_limits)
+                if substep == 19:
+                    # All values belong to this same pre-integration control instant.
+                    j=signal_joint
+                    signal_rows.append(dict(time_s=float(data.time),action=float(action[j]),
+                        target_rad=float(target[j]),position_rad=float(data.qpos[qids[j]]),
+                        velocity_rad_s=float(data.qvel[vids[j]]),torque_nm=float(data.ctrl[aids[j]])))
                 mujoco.mj_step(model,data)
                 feedback=np.max(np.abs(data.qvel[vids])*57.3)
                 maxfeedback=max(maxfeedback,float(feedback))
@@ -139,5 +149,22 @@ def play(policy,mode,seconds=60.,headless=False,kp_scale=4.,video=None):
     result.update(engine='MuJoCo',policy=None if policy is None else policy.identity,
                   diagnostic_kp_scale=kp_scale if mode=='pd' else None,hardware_tested=False,
                   validation_scope='Visual replay; classroom paired evaluation uses MotrixLab.')
+    signal_values=np.array([[r['action'],r['target_rad'],r['position_rad']] for r in signal_rows])
+    result['joint_signals']=dict(joint=JOINT_NAMES[signal_joint],joint_index=signal_joint,
+        sample_count=len(signal_rows),sample_period_s=.02,
+        action_span=float(np.ptp(signal_values[:,0])),target_span_rad=float(np.ptp(signal_values[:,1])),
+        position_span_rad=float(np.ptp(signal_values[:,2])),
+        first=signal_rows[0],last=signal_rows[-1])
+    if signals:
+        signals=Path(signals)
+        signals.parent.mkdir(parents=True,exist_ok=True)
+        with signals.open('w',encoding='utf-8',newline='') as stream:
+            writer=csv.DictWriter(stream,fieldnames=list(signal_rows[0]))
+            writer.writeheader();writer.writerows(signal_rows)
+        from course.runtime import sha256,write_json
+        result['joint_signals'].update(csv=str(signals),csv_sha256=sha256(signals))
+        write_json(signals.with_suffix('.json'),dict(mode=mode,engine='MuJoCo',policy=result['policy'],
+            diagnostic_kp_scale=result['diagnostic_kp_scale'],requested_seconds=seconds,
+            stop_reason=result.get('stop_reason'),headless=headless,signals=result['joint_signals']))
     if video: result.update(video=str(video),video_fps=25)
     return result

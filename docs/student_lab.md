@@ -25,6 +25,17 @@
 
 `survived=false` 的样本保留失败原因与失败时间，倒地后的静止帧不参与评分。不要删掉失败条件，也不要把重新出生后的站立当作存活。
 
+### 课堂 E1：用一个关节辨认控制路线
+
+先预测零动作 PD 与零速度 RL 中，哪条路线的关节目标保持固定。按教师安排顺序运行：
+
+```powershell
+.\run.ps1 play pd --seconds 10 --signals reports/local/e1-pd.csv
+.\run.ps1 play stand --checkpoint models/teaching_start.pt --seconds 10 --signals reports/local/e1-rl.csv
+```
+
+两次默认都记录关节 0（左髋偏航）。终端 `joint_signals` 的 `action_span`、`target_span_rad`、`position_span_rad` 分别给出动作、目标角与实际角的变化范围；CSV 每行记录同一控制时刻的动作、目标角、实际角、角速度和力矩，同名 JSON 绑定模型与采样身份。先检验预测，再引用一行读数解释目标与反馈的关系。PD 诊断增益为 KP×4，这两次短运行用于理解控制路径。
+
 ## 2. 提出可检验的假设
 
 阅读 `course/train.py` 的 `StandingCourseEnv._reward_terms`。用自己的话描述 `standing_speed_cost` 惩罚什么，何时生效，它改变奖励还是 Actor 输入。阅读 `configs/baseline.json` 与 `configs/improve.json`，列出二者唯一的实验因素。

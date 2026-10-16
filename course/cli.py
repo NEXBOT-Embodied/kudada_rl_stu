@@ -27,6 +27,8 @@ def main():
     play.add_argument('--headless',action='store_true')
     play.add_argument('--video',type=Path,help='Write actual simulation replay to MP4 at 25 fps')
     play.add_argument('--kp-scale',type=float,default=4.)
+    play.add_argument('--signals',type=Path,help='Save aligned action/target/position samples for one joint to CSV and an identity JSON')
+    play.add_argument('--signal-joint',type=int,default=0,help='Joint index for the signal record (0-9, default 0)')
     ev=commands.add_parser('evaluate')
     source(ev)
     ev.add_argument('--output',type=Path,required=True)
@@ -89,7 +91,7 @@ def main():
             from course.mujoco_play import play
             duration=args.seconds or (40. if args.mode=='transition' else 30. if args.mode=='walk' else 60.)
             if args.mode=='transition' and duration!=40.: parser.error('Transition replay duration is exactly 40 seconds')
-            result=play(policy,args.mode,duration,args.headless,args.kp_scale,args.video)
+            result=play(policy,args.mode,duration,args.headless,args.kp_scale,args.video,args.signals,args.signal_joint)
             if args.video:
                 from course.runtime import sha256
                 result['video_sha256']=sha256(args.video)
